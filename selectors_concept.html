@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,th,td{
+            border: 2px solid rgb(192, 149, 149);
+            border-collapse: collapse;
+        }
+        .color1{
+            background-color: black;
+            font-size: 20px;
+            height: 80px;
+            width: 90px;
+            color:white
+
+        }
+        .color2{
+            background-color:white;
+            font-size: 20px;
+            height: 80px;
+            width: 90px;
+        }
+        .color3{
+            background-color:blue;
+            font-size: 20px;
+            height: 80px;
+            width: 90px;
+            color:white
+
+        }
+        #color1{
+            background-color:white;
+            font-size: 20px;
+            height: 80px;
+            width: 90px;
+
+        }
+        #color2{
+            background-color:blue;
+            font-size: 20px;
+            height: 80px;
+            width: 90px;
+        }
+        #color3{
+            background-color:black;
+            font-size: 20px;
+            height: 80px;
+            width: 90px;
+            color:white
+
+        }
+        td,color1,color2{
+            background-color: antiquewhite;
+            height: 80px;
+            width: 90px;
+        }
+        *{
+            background-color: blueviolet;
+            background-size: cover;
+        }
+        h1{
+            font-size: 25px;
+            color:bisque;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>MY TABLE COLORS USING   CSS</h1>
+    <table>
+        <tr>
+            <td style="background-color: aqua;font-size:20px;height: 80px;width: 90px;">blue</td>
+            <td style="background-color: white;font-size:20px;height: 80px;width: 90px;">white</td>
+            <td style="background-color: black;font-size:20px;height: 80px;width: 90px; color:white">black</td>
+        </tr>
+        <tr>
+            <td class="color1">Black</td>
+            <td class="color2">white</td>
+            <td class="color3">blue</td>
+        </tr>
+        <tr>
+            <td id="color1">white</td>
+            <td id="color2">Blue</td>
+            <td id="color3">Black</td>
+        </tr>
+        <tr>
+            <td>white</td>
+            <td class="color1">Blue</td>
+            <td id="color2">Black</td>
+        </tr>
+    </table>
+</body>
+</html>
