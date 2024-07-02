@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .watermark::after{
+            content: "NTR";
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: red;
+            opacity: 0.5;
+            position: absolute;
+            bottom: 0;
+            left: 60PX;
+            top: 200PX;
+        }
+        .watermark{
+            position: relative;
+        }
+        .aimg12{
+            position: absolute;
+            left: 240px;
+            bottom: 295px;
+        }
+        .watermark2::after{
+            content: "NTR";
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: red;
+            opacity: 0.5;
+            position: absolute;
+            bottom: 0;
+            left: 300PX;
+            top: 200PX;
+        }
+        .watermark3::after{
+            content: "NTR";
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: red;
+            opacity: 0.5;
+            position: absolute;
+            bottom: 0;
+            left: 300PX;
+            top: 200PX;
+        }
+        .aimg13{
+            position: relative;
+           display:inline;
+           left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <div class="watermark">
+        <img src="../selector_task/ntr1.jpg"/>
+    </div>
+    <div class="watermark2">
+        <img class="aimg12" src="../selector_task/ntr1.jpg"/>
+    </div>
+    <div class="watermark3">
+        <img class="rimg12" src="../selector_task/ntr1.jpg"/>
+    </div>
+</div>
+    
+</body>
+</html>
