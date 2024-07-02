@@ -12,13 +12,13 @@
         .watermark::after{
             content: "Nature";
             text-align: center;
-            font-size: 5.5em;
+            font-size: 4.5em;
             font-weight: bold;
             color: red;
             opacity: 0.54;
-            position: absolute;
-            bottom: 20px;
-            left: 60PX;
+            position: relative;
+            bottom: 120px;
+            left: 8PX;
         }
         .watermark{
             position: relative;
@@ -28,14 +28,15 @@
     </style>
 </head>
 <body>
-    <fieldset style="height: 40vh; width: 70vh; text-align: center;">
+    <fieldset style="height: 40vh; width: 60vh; text-align: center;">
         <legend>Nature</legend>
-    <div class="watermark">  
-    <video muted autoplay> 
         
-        <source src="./video_for_using_image.mp4"/>
+    <div class="watermark">  
+    <video height="100" width="100" muted autoplay> 
+        
+        <source src="../positions/video_for_using_image.mp4"/>
     </video>
-</div>
+    </div>
 
 </fieldset>
 </body>
