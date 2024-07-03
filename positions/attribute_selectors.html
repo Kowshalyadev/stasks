@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [for]{
+            font-size: 18px;
+            font-family: "Roboto";
+            font-weight: 400;
+        }
+        [type="submit"]{
+            background-color:darksalmon;
+            border-radius: 12px;
+            width: 80px;
+            border-color: lightgreen;
+        }
+       input[type^="te"]{
+        color: rgb(255, 213, 0);
+       }
+       input[type$="il"]{
+        color: blueviolet;
+       }
+       input[type*="wo"]{
+        color: crimson;
+       }
+       div{
+        border: 2px solid;
+        background-color: tan;
+        border-radius: 12px;
+       }
+    </style>
+</head>
+<body>
+    <div>
+    <form style="text-align: center;">
+        <label for="fname">Frist Name</label><br>
+        <input type="text" id="fname" name="fname"/><br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname"/><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="femail"/><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password"/><br><br>
+        <input type="submit" name="submit" value="Save"/>
+        
+    </form>
+</div>
+</body>
+</html>
