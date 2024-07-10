@@ -15,8 +15,8 @@
             flex-direction:column;
             background-color: #B2BEB5;
             flex-wrap: wrap;
-             justify-content: center;
-            align-items: center;
+             /* justify-content: center;
+            align-items: center; */
             border-radius: 12px;
         }
         .div1{
@@ -26,6 +26,17 @@
             flex-direction:row;
             /* justify-content: center;
             align-items: center; */
+           
+        }
+        .div2{
+            /* border: 2px solid black; */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction:column;
+            /* justify-content: center;
+            align-items: center; */
+            height: 10vh;
+            width: 30vh;
            
         }
         p{
@@ -56,8 +67,8 @@
     </style>
 </head>
 <body>
-    <div>
-        <div class="div1">
+    <div class="shadow">
+        <div class="div2">
         <p>ESC<br>FnLock</br></p>
         <p><ion-icon name="volume-mute-outline"></ion-icon><br>F1</br></p>
         <p><ion-icon name="volume-low-outline"></ion-icon><br>F2</br></p>
@@ -80,7 +91,7 @@
         <p><ion-icon name="lock-closed-outline"></ion-icon><br>F10</br></p>
         <p><ion-icon name="scan-outline"></ion-icon><br>F11</br></p>
         <p><ion-icon name="calculator-outline"></ion-icon><br>F12</br></p>
-        <p><i class="bi bi-textarea-t"></i><br>Insert</br></p>
+        <p><i class="bi bi-textarea-t"></i>Insert</p>
         <p><i class="bi bi-scissors"></i><br>Prt</br></p>
         <p><br>Delete</br></p>
     </div>

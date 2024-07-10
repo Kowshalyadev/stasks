@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .fieldset{
+            text-align: center;
+            margin-left: 200px;
+        } */
+        label[for*="na"]{
+            color: rgb(255, 0, 153);
+        }
+        [for^=ad]{
+            color: aqua;
+        }
+        [for="phone"]{
+            color:blue
+        }
+        [for|="E"]{
+            color:deeppink;
+        }
+        .column{
+            /* float: left;
+            width: 33%; */
+            display: inline-block;
+            margin-left: 23px;
+            vertical-align: top;
+
+        }
+        .column+.column+.column{
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset style="width: 100vh;text-align: center;">
+        <legend style="text-align: center;">Registration Form</legend>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex col-12"></div>
+                    <form action="./registration_complited.html">
+        
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="eg:john"/><br>
+       
+        
+                    <label for="mname">Middle Name:</label><br>
+                    <input type="text" id="mname" name="mname"/><br>
+        
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname" placeholder="eg:nick"/><br>
+                </div>
+    
+        <label for="address1">Address1:</label><br>
+        <textarea></textarea><br>
+    
+        
+        <label for="address1">Address2:</label><br>
+        <textarea></textarea><br>
+    
+        
+        <label for="address1">Address3:</label><br>
+        <textarea></textarea><br>
+        
+        
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city"/><br>
+    
+        
+        <label for="city">District:</label><br>
+        <input type="text" id="city" name="city"/><br>
+    
+        
+        <label for="city">State:</label><br>
+        <input type="text" id="city" name="city"/><br>
+    
+        
+        <label for="pincode">Pincode</label><br>
+        <input type="text" id="pincode" name="pincode"/><br>
+    
+        
+        <label for="E-mails">Email</label><br>
+        <input type="e-mail" id="E-mail" name="email"/><br>
+    
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{4}"/><br><br>
+        <input type="submit" value="Save"/>
+        <input type="submit" value="Cancle" formaction="./second_page.html"/>
+        
+    </form>
+</div>
+</div>
+
+    </fieldset>
+</body>
+</html>
