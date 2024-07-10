@@ -33,15 +33,24 @@
         .column+.column+.column{
             margin-left: 25px;
         }
+        fieldset{
+            border: 2px solid;
+            margin: 10vh;
+            padding: 10vh;
+            text-align: center;
+            background-color: violet;
+            border-radius: 12px;
+
+        }
     </style>
 </head>
 <body>
-    <fieldset style="width: 100vh;text-align: center;">
-        <legend style="text-align: center;">Registration Form</legend>
-        <div class="container">
+    <fieldset>
+        <form>
+        <!-- <div class="container">
             <div class="row">
-                <div class="d-flex col-12"></div>
-                    <form action="./registration_complited.html">
+                <div class="d-flex col-12"> -->
+                    <!-- <form action="./registration_complited.html"> -->
         
                     <label for="fname">First Name:</label><br>
                     <input type="text" id="fname" name="fname" placeholder="eg:john"/><br>
@@ -52,7 +61,7 @@
         
                     <label for="lname">Last Name:</label><br>
                     <input type="text" id="lname" name="lname" placeholder="eg:nick"/><br>
-                </div>
+                <!-- </div> -->
     
         <label for="address1">Address1:</label><br>
         <textarea></textarea><br>
@@ -88,12 +97,11 @@
         <label for="phone">Phone Number</label><br>
         <input type="tel" id="phone" name="phone" pattern="[0-9]{4}"/><br><br>
         <input type="submit" value="Save"/>
-        <input type="submit" value="Cancle" formaction="./second_page.html"/>
+        <input type="submit" value="Cancle"/>
         
     </form>
-</div>
-</div>
-
-    </fieldset>
+</fieldset>
+<!-- </div>
+</div> -->
 </body>
 </html>
