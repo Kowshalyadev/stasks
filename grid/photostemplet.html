@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows:100px 100px 100px;
+            gap: 12px;
+            justify-content: center;
+            /* align-content: center; */
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            border:2px solid red;
+        }
+        .item1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .item2{
+            grid-row:1/2;
+            grid-column: 2/4;
+        }
+        .item3{
+            grid-row: 2/4;
+        }
+        .item4{
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        .item5{
+            grid-row:3/4;
+            grid-column:2/3;
+        }
+        .item6{
+            grid-row: 2/4;
+            grid-column: 3/4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./drakhome.jpg" alt="" class="item1">
+        <img src="./road4ways.jpg" alt="" class="item2">
+        <img src="./swimming.jpg" alt="" class="item3">
+        <img src="./images_girl.jpg" alt="" class="item4">
+        <img src="./camera.jpg" alt="" class="item5">
+        <img src="./ntr.jpg" alt="" class="item6">
+    </div>
+    
+</body>
+</html>

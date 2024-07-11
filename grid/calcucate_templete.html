@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #424242;
+            font-family: Roboto;
+            border: 2px solid white;
+            width: 30%;
+            /* display:grid;
+            justify-content: center; */
+
+        }
+        .container{
+            display: grid;
+            grid-template-columns:50px 50px 50px 50px;
+            grid-template-rows:50px 50px 50px 50px;
+            border-radius: 12px;
+            padding:25px;
+            gap: 12px;
+            display:grid;
+            /* justify-content: center; */
+        }
+        button{
+            height: 50px;
+            width: 50px;
+        }
+        p{
+            /* display: grid;
+            grid-template-columns:20px;
+            grid-template-rows:20px;
+            background-color: aliceblue;
+            border-radius: 12px;
+            padding:18px;
+            gap: 12px;
+            display:grid;
+            justify-content: center;
+            width: 20px; */
+
+            display:flex;
+            background-color: white;
+            height: 20vh;
+            width: 45vh;
+            margin: 25px;
+            justify-content:end;
+            align-content:end;
+        }
+        .colorb{
+            background-color: black;
+            color: aliceblue;
+            font-size: 25px;
+        }
+        .colorc{
+            background-color:red;
+            color: aliceblue;
+            font-size: 25px;
+        }
+        .color{
+            background-color: antiquewhite;
+            font-size: 25px;
+        }
+        .btn1{
+            width:40vh;
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+        }
+        button:hover,.colorb:hover,.colorc:hover{
+            background-color: lightcoral;
+            font-size: 30px;
+        }
+        span{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button></button> -->
+     <p><span>0 + 0<br>0</span></p>
+    <div class="container">
+        <button class="color">7</button>
+        <button class="color">8</button>
+        <button class="color">9</button>
+        <button class="colorb">+</button>
+        <button class="color">4</button>
+        <button class="color">5</button>
+        <button class="color">6</button>
+        <button class="colorb">-</button>
+        <button class="color">1</button>
+        <button class="color">2</button>
+        <button class="color">3</button>
+        <button class="colorb">*</button>
+        <button class="colorc">c</button>
+        <button class="color">0</button>
+        <button class="colorb">=</button>
+        <button class="colorb">/</button>
+    </div>
+
+    </div>
+</body>
+</html>

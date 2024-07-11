@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            /* background-color: ; */
+            gap: 2vh;
+            grid-template-columns:300px 300px 300px;
+            grid-template-rows: 100px 100px 100px;
+            /* justify-content: space-between; */
+        }
+        .class{
+            display: grid;
+            background-color: aqua;
+            column-gap: 12px;
+            /* width: 50px; */
+        }
+        .child5{
+           grid-column-start: 2;
+           grid-column-end: 4;
+            
+        }
+        .child8{
+            grid-column-start: 2;
+           grid-column-end: 4;
+        }
+        .child5{
+            grid-row: 2/4;
+            background-color: rgb(87, 165, 42);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="class child1">child1</div>
+        <div class="class child2">child2</div>
+        <div class="class child3">child3</div>
+        <div class="class child4">child4</div>
+        <div class="class child5">child5</div>
+        <!-- <div class="class child6">child6</div> -->
+        <div class="class child7">child7</div>
+        <!-- <div class="class child8">child8</div> -->
+        <!-- <div class="class child9">child9</div> -->
+    </div>
+</body>
+</html>
