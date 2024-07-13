@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #424242;
+            border: 2px solid white;
+        }
+         .container{
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows:100px 60px 60px 60px 60px 100px;
+            gap: 12px;
+            justify-content: center;
+            align-content: center;
+            margin: 20px;
+            /* align-content: center; */
+        }
+        .item1{
+            grid-column: 1/5;
+            grid-row: 1/2;
+        }
+        .item2{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .item3{
+            grid-column:2/3;
+            grid-row:2/3;
+        }
+        .item4{
+            grid-column:3/4;
+            grid-row:2/3;
+        }
+        .item5{
+            grid-row: 2/3;
+            grid-column: 4/5;
+        }
+        .item{
+            background-color:white;
+            font-size: 20px;
+        }
+        .itemb{
+            background-color: black;
+            font-size: 20px;
+            color: white;
+        }
+        .itemr{
+            background-color: red;
+            font-size: 20px;
+        }
+        .item:hover,.itemb:hover,.itemr:hover{
+            background-color:lightcoral;
+            font-size: 25px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="item1" id="result"></button>
+        <button class="item2 item" onclick="buttonClick()">7</button>
+        <button class="item3 item">8</button>
+        <button class="item4 item">9</button>
+        <button class="item5 itemb">+</button>
+        <button class="item6 item">4</button>
+        <button class="item7 item">5</button>
+        <button class="item8 item">6</button>
+        <button class="item9 itemb">_</button>
+        <button class="item10 item">1</button>
+        <button class="item11 item">2</button>
+        <button class="item12 item">3</button>
+        <button class="item13 itemb">*</button>
+        <button class="item14 itemr">c</button>
+        <button class="item15 item">0</button>
+        <button class="item17 itemb">=</button>
+        <button class="item18 itemb">/</button>
+
+    </div>
+    
+</body>
+</html>

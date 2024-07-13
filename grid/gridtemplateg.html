@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+       grid-template-rows: auto auto ;
+        gap: 80px;
+        row-gap: 30px;
+      }
+      .card1 {
+        /* height: 50%; */
+        /* width: 60%; */
+        border: 2px solid red;
+        background-color: bisque;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        /* /* margin: 12px; */
+      }
+      img {
+        height: 100px;
+        border-radius: 12px;
+        display: flex;
+        width: 100%;
+        /* margin: 12px; */
+      }
+      span {
+        font-size: 14px;
+        margin-left: 12px;
+        margin-right: 8px;
+      }
+      p {
+        font-size: 16px;
+        margin-left: 12px;
+        margin-right: 8px;
+      }
+      .card1:hover {
+        background-color: rgb(233, 122, 54);
+        /* height: 70vh; */
+      }
+      .container2 {
+        display:flex;
+        justify-content: center;
+        /* border: 2px solid black; */
+        width: 200vh;
+        /* justify-content: center; */
+        /* grid-template-rows: repeat(6, 8%);
+        grid-template-columns: repeat(6, 8%);
+        gap: 12px;
+        justify-content: center;
+        align-content: center; */
+      }
+      a{
+        border: 2px solid ;
+      }
+      [value="1"] {
+        background-color: black;
+        color: aliceblue;
+        display: flex;
+        /* height: 60%;
+          width: 60%;  */
+      }
+      [type="submit"]:hover {
+        background-color: black;
+        color: white;
+      }
+      .chef_img1 {
+        height: 60vh;
+        /* width: 50vh; */
+      }
+      .middle_container {
+        display: grid;
+        justify-content: center;
+      }
+      .last_container {
+        display: grid;
+        grid-template-rows: repeat(3, 33%);
+        grid-template-columns: repeat(3, 33%);
+        gap: 14px;
+      }
+      .last_card1 {
+        /* display: grid;
+          grid-template-columns: 50px 50px;
+          grid-template-rows: 50px 50px;
+          gap: 12px; */
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        width: 100px;
+        background-color: darkgrey;
+        color: white;
+      }
+      [class="Travel"] {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
+      <a class="navbar-brand" href="#">My Food</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="card1">
+        <img src="./sandwich (1).jpg" />
+        <p>
+          <span><b>Perfect Sandwich,A Real NYC Classic</b></span
+          ><br />Just some random text,lorem ipsum text prasent tincidunt ipsum
+          lipsum.
+        </p>
+      </div>
+      <div class="card1">
+        <img src="./steak.jpg" />
+        <p>
+          <span><b>Let Me Tell You About This Steak</b></span
+          ><br />Once again, some random text to lorem lorem lorem lorem ipsum
+          text praesent tincidunt ipsum lipsum.
+        </p>
+      </div>
+      <div class="card1">
+        <img src="./cherries.jpg" />
+        <p>
+          <span><b>Cherries, interrupted</b></span
+          ><br />Lorem ipsum text praesent tincidunt ipsum lipsum. What else?
+        </p>
+      </div>
+      <div class="card1">
+        <img src="./wine.jpg" />
+        <p>
+          <span><b>Once Again, Robust Wine and Vegetable Pasta</b></span
+          ><br />Lorem ipsum text praesent tincidunt ipsum lipsum.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card1">
+        <img src="./popsicle.jpg" />
+        <p>
+          <span><b>All I Need Is a Popsicle</b></span><br />Lorem ipsum text praesent tincidunt ipsum lipsum.
+        </p>
+      </div>
+      <div class="card1">
+        <img src="./salmon.jpg" />
+        <p>
+          <span><b>Salmon For Your Skin</b></span><br />Once again, some random text to lorem lorem lorem lorem ipsum
+          text praesent tincidunt ipsum lipsum.
+        </p>
+      </div>
+      <div class="card1">
+        <img src="./sandwich.jpg" />
+        <p>
+          <span><b>The Perfect Sandwich, A Real Classic</b></span><br />Just some random text, lorem ipsum text praesent tincidunt
+          ipsum lipsum.
+        </p>
+      </div>
+      <div class="card1">
+        <img src="./french.jpg" />
+        <p>
+          <span><b>Le French</b></span><br />Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum
+          lipsum.
+        </p>
+      </div>
+
+      <!-- button123 -->
+      <div class="container2">
+        <a href="">1</a>
+        <a href="">1</a>
+        <a href="">1</a>
+        <a href="">1</a>
+      </div>
+      <hr />
+    </div>
+    <hr />
+    <!-- chef container  -->
+    <div class="middle_container">
+      <p style="text-align: center">About Me, The Food Man</p>
+      <img src="./chef.jpg" class="chef_img1" />
+      <p style="text-align: center">I am Who I Am!</p>
+      <p style="text-align: center">With Passion For Real, Good Food</p>
+      <p style="text-align: center">
+        Just me, myself and I, exploring the universe of unknownment. I have a
+        heart of love and an interest of lorem ipsum and mauris neque quam blog.
+        I want to share my world with you. Praesent tincidunt sed tellus ut
+        rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+        congue gravida diam non fringilla. Praesent tincidunt sed tellus ut
+        rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+        congue gravida diam non fringilla.
+      </p>
+    </div>
+    <hr />
+    <div class="last_container">
+      <div class="last_card1">
+        <h5>FOOTER</h5>
+        <p>
+          Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+          porta lectus vitae, ultricies congue gravida diam non fringilla.
+        </p>
+        <p>Powered by w3.css</p>
+      </div>
+      <div class="last_card2">
+        <h5>BLOG POSTS</h5>
+        <img src="./workshop.jpg" />
+
+        <p style="margin-top: -80px; margin-left: 120px; margin-bottom: 40px">
+          Lorem<br />Sed mattis nunc
+        </p>
+        <img src="./gondol.jpg" />
+
+        <p style="margin-top: -80px; margin-left: 120px">
+          Ipsum<br />
+          Praes tinci sed
+        </p>
+      </div>
+      <div class="last_card3">
+        <h5>POPULAR TAGS</h5>
+        <!-- <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <p>Powered by w3.css</p> -->
+        <button class="Travel">Travel</button>
+        <button>New York</button>
+        <button>Dinner</button>
+        <button>Salmon</button>
+        <button>France</button>
+        <button>Drinks</button>
+      </div>
+    </div>
+  </body>
+</html>

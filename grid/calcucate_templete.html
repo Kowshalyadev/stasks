@@ -20,7 +20,7 @@
             grid-template-rows:50px 50px 50px 50px;
             border-radius: 12px;
             padding:25px;
-            gap: 12px;
+            gap: 19px;
             display:grid;
             /* justify-content: center; */
         }
@@ -40,13 +40,14 @@
             justify-content: center;
             width: 20px; */
 
-            display:flex;
+            display:grid;
             background-color: white;
-            height: 20vh;
-            width: 45vh;
-            margin: 25px;
-            justify-content:end;
-            align-content:end;
+            height: 10vh;
+            width: 40vh;
+            gap: 12vh;
+            bottom: 290px;
+            /* justify-content:end;
+            align-content:end; */ */
         }
         .colorb{
             background-color: black;
@@ -75,12 +76,21 @@
         span{
             font-size: 30px;
         }
+        p{
+            grid-column: 1/5;
+            grid-row: 1/2;
+
+        }
     </style>
 </head>
 <body>
     <!-- <button></button> -->
-     <p><span>0 + 0<br>0</span></p>
+     <!-- <p><span>0 + 0<br>0</span></p> -->
     <div class="container">
+        <p></p>
+        <!-- <p></p>
+        <p></p>
+        <p></p> -->
         <button class="color">7</button>
         <button class="color">8</button>
         <button class="color">9</button>

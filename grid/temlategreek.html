@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container1{
+            display:flex;
+            /* border: 2px solid; */
+            justify-content:space-between;
+
+            
+            /* height: 100vh;
+            width: 100vw; */
+            padding: 30px 50px;
+            gap: 12px;
+            font-size: 4vh;
+        }
+        button{
+            display: flex;
+            width: 35px;
+            margin-bottom: 6px;
+            background-color: black;
+            
+        }
+        .item2{
+            display:flex;
+            /* border: 2px solid; */
+            align-content: center;
+            margin: 12px;
+            /* justify-content: center; */
+        }
+        /* .item3{
+            display: flex;
+            justify-items: center;
+        } */
+        .container {
+        display: grid;
+        grid-template-columns: 25vh 25vh 25vh 25vh;
+       grid-template-rows: auto auto ;
+        gap: 25vh;
+        row-gap: 30px;
+        padding: 3vh 10vh;
+      }
+      .img1 {
+        height: 60vh;
+        border-radius: 12px;
+        display: flex;
+        /* width: 100%; */
+        /* margin: 12px; */
+      }
+      h1{
+        font-size:4vh;
+        width: 40vh;
+        /* border: 2px solid; */
+      }
+      p{
+        font-size: 3vh;
+        width: 40vh;
+      }
+      .container3{
+        display: flex;
+        justify-content: center;
+        width: 180vh;
+        gap: 5vh;
+        row-gap: 30px;
+        /* border: 2px solid; */
+      }
+      a{
+        /* height: 20vh; */
+        border: 2px solid;
+        padding:2vh;
+        background-color: black;
+        color: white;
+      }
+      .middle_container {
+        display: grid;
+        justify-content: center;
+        /* border: 2px solid; */
+      }
+      .imgchef{
+        display: flex;
+        justify-content: center;
+      }
+      .last_container {
+        display: grid;
+        grid-template-rows: repeat(3, 33vh);
+        grid-template-columns: repeat(3, 33vh);
+        justify-content: space-between;
+        padding: 10vh 10vh;
+        gap: 14px;
+        font-size: 6vh;
+      }
+      .buttons{
+        display: grid;
+        grid-template-columns:repeat(6,11vh);
+        grid-template-rows: repeat(2,6vh);
+        font-size: 12px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="item1">
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+        <div class="item2">My Food</div>
+        <div class="div1">Mail</div>
+    </div>
+    <!-- header completed -->
+    <div class="container">
+        <div class="card1">
+                <img src="./sandwich (1).jpg" class="img1" />
+                <h1>Perfect Sandwich,A Real NYC Classic</h1>
+                <p>Just some random text,lorem ipsum text prasent tincidunt ipsum
+                    lipsum.</p>
+          </div>
+          <div class="card1">
+                <img src="./steak.jpg" class="img1" />
+                <h1>Let Me Tell You About This Steak</h1>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum
+                text praesent tincidunt ipsum lipsum.
+                </p>
+          </div>
+          <div class="card1">
+                <img src="./cherries.jpg" class="img1"/>
+                <h1>Cherries, interrupted</h1>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum. What else?</p> 
+          </div>
+          <div class="card1">
+            <img src="./wine.jpg" class="img1"/>
+            <h1>Once Again, Robust Wine and Vegetable Pasta</h1>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          </div>
+    </div>
+    <div class="container">
+        <div class="card1">
+          <img src="./popsicle.jpg" class="img1"/>
+          <h1>All I Need Is a Popsicle</h1>
+          <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="card1">
+          <img src="./salmon.jpg" class="img1"/>
+          <h1>Salmon For Your Skin</h1>
+          <p>Once again, some random text to lorem lorem lorem lorem ipsum
+            text praesent tincidunt ipsum lipsum.
+          </p>
+        </div>
+        <div class="card1">
+          <img src="./sandwich.jpg" class="img1"/>
+          <h1>The Perfect Sandwich, A Real Classic</h1>
+          <p>Just some random text, lorem ipsum text praesent tincidunt
+            ipsum lipsum.</p>
+          </p>
+        </div>
+        <div class="card1">
+          <img src="./french.jpg" class="img1"/>
+          <h1>Le French</h1>
+          <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum
+            lipsum.
+          </p>
+        </div>
+        <!-- cards section completed -->
+        <div class="container3">
+            <p style="text-align:end;"><<</p>
+            <a href="">1</a>
+            <a href="" style="background-color:darkgray;">2</a>
+            <a href="" style="background-color:darkgray;">3</a>
+            <a href="" style="background-color:darkgray;">4</a>
+            <p>>></p>
+        </div>
+    </div>
+    <hr>
+    <!-- buttons completed -->
+    <div class="middle_container">
+        <p style="width: 200vh;text-align: center;">About Me, The Food Man</p>
+        <div class="imgchef">
+            <img src="./chef.jpg"/>
+        </div>
+        <p style="width: 200vh;text-align: center;">I am Who I Am!</p>
+        <p style="width: 200vh;text-align: center;">With Passion For Real, Good Food</p>
+        <p style="width: 200vh;text-align: center;">Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog.
+          I want to share my world with you. Praesent tincidunt sed tellus ut
+          rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+          congue gravida diam non fringilla. Praesent tincidunt sed tellus ut
+          rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+          congue gravida diam non fringilla.
+        </p>
+      </div>
+      <hr/>
+
+
+
+
+      <div class="last_container">
+        <div class="last_card1">
+          <h5>FOOTER</h5>
+          <p>
+            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+            porta lectus vitae, ultricies congue gravida diam non fringilla.
+          </p>
+          <p>Powered by <u>w3.css</u></p>
+        </div>
+        <div class="last_card2">
+          <h5>BLOG POSTS</h5>
+          <img src="./workshop.jpg" height="85vh"/>
+  
+          <p style="margin-top: -80px; margin-left: 120px; margin-bottom: 40px">
+            Lorem<br />Sed mattis nunc
+          </p>
+          <hr>
+          <img src="./gondol.jpg" height="85vh"/>
+  
+          <p style="margin-top: -80px; margin-left: 120px">
+            Ipsum<br />
+            Praes tinci sed
+          </p>
+        </div>
+        <div class="last_card3">
+          <h5>POPULAR TAGS</h5>
+          <div class="buttons">
+            <a href="">Travel</a>
+            <a href="" style="background-color:darkgray; font-size: 10px; padding: 12px;">New York</a>
+            <a href="" style="background-color:darkgray;">Dinner</a>
+            <a href="" style="background-color:darkgray;">Salmon</a>
+            <a href="" style="background-color:darkgray;">France</a>
+            <a href="" style="background-color:darkgray;">Drinks</a>
+            <a href="" style="background-color:darkgray;">Ideas</a>
+            <a href="" style="background-color:darkgray;">Flavors</a>
+            <a href="" style="background-color:darkgray;">Cuisin</a>
+            <a href="" style="background-color:darkgray;">Chicken</a>
+            <a href="" style="background-color:darkgray;">Dressing</a>
+            <a href="" style="background-color:darkgray;">Fried</a>
+            <a href="" style="background-color:darkgray;">Fish</a>
+            <a href="" style="background-color:darkgray;">Duck</a>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
