@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    .md{
+        width: 5vw;
+        border: 2px solid;
+        height: 50vh;
+        margin-top: -60px;
+        /* display: flex;
+        justify-content: center; */
+        border-radius: 50px;
+        padding: 5px;
+        margin-left:50px;
+        padding-top: 80px;
+        background-color:honeydew;
+    }
+    .buttons{
+        height: 40px;
+        width: 40px;
+        margin: 10px;
+        border-radius: 18px;
+        /* background-color: lightblue; */
+
+    }
+    .item{
+        background-color: aqua;
+        height: 12vh;
+        width: 20vh;
+        /* border: 2px solid black; */
+        /* transform: translateY(10vh); */
+    }
+    #btn1:active ~ .KK svg {
+        /* transform: translateX(50vh); */
+        transition-property: all;
+        transition-duration: 1s;
+        transform: rotate(3600deg);
+    }
+    #btn2:active ~ .KK svg {
+        /* transform: translateX(50vh); */
+        transition-property: all;
+        transition-duration: 3s;
+        transform: rotate(3000deg);
+    }
+    #btn3:active ~ .KK svg {
+        /* transform: translateX(50vh); */
+        transition-property: all;
+        transition-duration: 40s;
+        transform: rotate(36000deg);
+    }
+    .KK{
+        /* border: 2px solid; */
+        width: 80vw;
+        /* padding: 20px; */
+        perspective: 100px;
+    }
+    svg{
+        height: 30vh;
+        width: 30vh;
+        /* background-attachment:white;
+        color: black; */
+    }
+    .footer{
+        width: 2000vh;
+        height: 1000vh;
+    }
+    .md:active ~ .kk + .buttons{
+        transition-property: all;
+        transition-duration: 40s;
+        transform: rotate(36000deg);
+
+    }
+   </style>
+</head>
+<body>
+    <!-- <div class="md"> -->
+        <div class="md">
+            <button id="btn1" class="buttons" style="background-color:green;">on</button><br>
+            <button id="btn2" class="buttons" style="background-color:lightgreen;">3s</button><br>
+            <button id="btn3" class="buttons" style="background-color:lightgoldenrodyellow;">40s</button><br>  
+            <button id="btn4" class="buttons" style="background-color:rgb(236, 236, 89);">20s</button><br> 
+            <div class="KK">
+                <svg fill="#000000" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M352.57 128c-28.09 0-54.09 4.52-77.06 12.86l12.41-123.11C289 7.31 279.81-1.18 269.33.13 189.63 10.13 128 77.64 128 159.43c0 28.09 4.52 54.09 12.86 77.06L17.75 224.08C7.31 223-1.18 232.19.13 242.67c10 79.7 77.51 141.33 159.3 141.33 28.09 0 54.09-4.52 77.06-12.86l-12.41 123.11c-1.05 10.43 8.11 18.93 18.59 17.62 79.7-10 141.33-77.51 141.33-159.3 0-28.09-4.52-54.09-12.86-77.06l123.11 12.41c10.44 1.05 18.93-8.11 17.62-18.59-10-79.7-77.51-141.33-159.3-141.33zM256 288a32 32 0 1 1 32-32 32 32 0 0 1-32 32z"></path></g></svg>
+             <!-- <img class="img1" src="./chef.jpg" alt="" height="60vh">
+             <img src="./chef.jpg" alt="" height="60vh"> -->
+            </div>   
+        </div>
+        <!-- <div class="footer"></div> -->
+    <button id="btn1">on</button>
+    <button id="btn2">3s</button>
+    <button id="btn3">40s</button>
+    <!-- <button id="btn4">click</button>
+    <button id="btn5">click</button> -->
+    <!-- <div class="item"></div> -->
+    <!-- </div> -->
+     
+    <!-- <div class="d-flex felx-column justify-content-center"> -->
+          
+</body>
+</html>
