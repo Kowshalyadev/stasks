@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding-left:100px;
+            margin: 0px;
+            display:grid;
+            justify-content: center;
+            /* padding-bottom: 100px; */
+        }
+        .container{
+            background-image: url(./tm-astro-bg.jpg);
+            height: 80vh;
+            width: 100vh;
+            background-size: cover;
+        }
+        /* .el2,.el3,.el4,.el5,.el6{
+            border: 2px solid red;
+            height: 50vh;
+        } */
+        .el1{
+            /* padding:2vh 2vh; */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 3vh;
+            padding-right: 3vh;
+
+        }
+        .el1b{
+            display: flex;
+            /* gap: 1vh; */
+        }
+        .el2{
+            display: flex;
+            color: white;
+            margin-left: 8vh;
+        }
+        .line{
+            height: 0.2vh;
+            width:5vw;
+            background-color: white;
+            margin-bottom: 2vh;
+            display: flex;
+            justify-content: center;
+        }
+        .dot{
+           height: 1vh;
+           width: 1vh;
+           background-color:white;
+           border-radius: 19px;
+           /* margin-bo: 20vh; */
+           display: flex;
+           align-content: end;
+           border: 2px solid red;
+        }
+        .maindot{
+            margin-left: 20vh;
+        }
+        .big_line{
+            height:0.3vh;
+            width: 60vh;
+            background-color: rgb(255, 255, 255);
+        }
+        .el3{
+            display:grid;
+            grid-template-columns: 35vh 10vh;
+            grid-template-rows:38vh 10vh;
+            margin-left: 8vh;
+            gap: 1vh;
+
+        }
+        .el3a{
+            background-color:rgb(50, 38, 92);
+            opacity: 0.7;
+            padding: 2vh;
+        }  
+        .el3b{
+            display:grid;
+            grid-template-columns:15vh;
+            grid-template-rows: 23vh 23vh;
+            gap: 0vh;
+
+        } 
+        .img1{
+            width: 28vh;
+            background-size: cover;
+            border: 2px solid;
+            border-radius: 2vh;
+        }
+        .View_button{
+            display: flex;
+            /* width: 12px;
+            border: 2px solid; */
+            justify-content: center;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            color:white;
+            font-size: 2vh;
+            padding-left: 4vh;
+            padding-right: 4vh;
+        }
+        span{
+            color: green;
+        }
+        .container1{
+            background-image: url(./tm-astro-bg.jpg);
+            height: 80vh;
+            width: 100vh;
+            background-size: cover;
+        }
+        .photes{
+            display: grid;
+            grid-template-columns: 20vh 20vh 20vh 20vh 20vh 20vh;
+            grid-template-rows: 35vh;
+            gap: 1vh;
+            margin-left: 8vh;
+        }
+        .img2{
+            height: 30vh;
+            width: 20vh;
+        }
+        .second{
+            display: flex;
+        }
+        .threes_dots{
+            display: grid;
+            grid-template-columns: 4vh 4vh 4vh;
+            grid-template-rows: 4vh;
+            justify-content: center;
+        }
+        .footer1{
+            display: flex;
+            justify-content: space-between;
+            color:white;
+            font-size: 2vh;
+            padding-left: 4vh;
+            padding-right: 4vh;
+            margin-bottom:-200vh;
+        }
+        .container2{
+            background-image: url(./tm-astro-bg.jpg);
+            height: 80vh;
+            width: 100vh;
+            background-size: cover;
+        }
+        .third_slid{
+            display:grid;
+            justify-content: end;
+        }
+        .card3{
+            background-color:rgb(50, 38, 92);
+            opacity: 0.7;
+            padding: 2vh;
+            width: 70vh;
+        }  
+        .el31ine{
+            display: flex;
+            color: white;
+            /* margin-left: 8vh; */
+        }
+        .container3{
+            background-image: url(./tm-astro-bg.jpg);
+            height: 80vh;
+            width: 100vh;
+            background-size: cover;
+        }
+        .last_card{
+            display: grid;
+            grid-template-columns: 20vh 40vh;
+            grid-template-rows: 20vh;
+            color: white;
+            gap: 12vh;
+            justify-content: center;
+        }
+        .divided_two{
+            display:grid;
+            margin-top: -1vh;
+
+        }
+        .last_line{
+            height: 0.1vh;
+            width: 18vh;
+            background-color: white;
+        }
+        @media screen and (min-width:320px) and (max-width:425px)
+        {
+            .container,.container1,.container2,.container3{
+                background-color: aqua;
+            }
+        } */
+        @media screen and (min-width:425px) and (max-width:768px)
+        {
+            .container ,.container1, .container2, .container3{
+                background-color: blanchedalmond;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:1024px)
+        {
+            .container, .container1 ,.container2, .container3{
+                background-color: blanchedalmond;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="el1">
+            <h2 class="el1a">Astro Motion</h2>
+            <div class="el1b">
+                <div class="home">
+                    <p style="color: green;">Home</p>
+                    <p class="line" style="background-color: green;"></p>
+                    <p style="width:1vw;height: 2vh;background-color:green;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                </div>
+                </div>
+                <div class="el1b">
+                    <div class="home">
+                        <p class="p1">Gallery</p>
+                        <p class="line"></p>
+                        <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                    </div>
+                </div>
+                    <div class="el1b">
+                        <div class="home">
+                            <p class="p1">About</p>
+                            <p class="line"></p>
+                            <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                        </div>
+                        </div>
+                        <div class="el1b">
+                            <div class="home">
+                                <p class="p1">contact</p>
+                                <p class="line"></p>
+                                <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                            </div>
+                            </div>
+        </div>
+            <div class="el2">
+                <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.8vh;"></p>
+                <div class="big_line"></div>
+                <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.6vh;"></p>
+            </div>
+            <div class="el3">
+                <div class="el3a">
+                    <h6 style="color: white; margin-top: 2vh;opacity: 1;color: white;">Welcome to Astro Motion</h6>
+                    <p style="color: white;font-size:1.5vh;display: flex;flex-wrap: wrap;">This Html Template has a Motion Video Background loop which is provided by <span>Get Free Picture</span>. page responsive layout for your websites.Feel free to use this for a acommerical purpose.</p>
+                    <p style="color: white; font-size: 1.5vh;display: flex;flex-wrap: wrap;">you are not permitted to redistribute this template on your free Css collection wedsites.Please<span>Contact</span>for more infromation.</p>
+                </div>
+                <div class="el3b">
+                    <img class="img1"src="./home-img-1.jpg" alt="">
+                    <img class="img1"src="./home-img-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="el2" style="margin-top:-6vh;">
+                <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.8vh;"></p>
+                <div class="big_line"></div>
+                <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.6vh;"></p>
+            </div>
+            <div class="View_button">
+                <button>View Gallery</button>
+            </div>
+            <div class="footer">
+                <p>Copyright 2021 Astro Motion Company Limited.All rights reserved.</p>
+                <p>Designed by TemplateMo</p>
+            </div>
+    </div>
+    <div class="container1">
+        <div class="el1">
+            <h2 class="el1a">Astro Motion</h2>
+                <div class="el1b">
+                    <div class="home">
+                    <p>Home</p>
+                    <p class="line"></p>
+                    <p style="width:1vw;height: 2vh;background-color:white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                    </div>
+                </div>
+                <div class="el1b">
+                    <div class="home">
+                        <p style="color: green;">Gallery</p>
+                        <p class="line" style="background-color: green;"></p>
+                        <p style="width:1vw;height: 2vh;background-color:green;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                    </div>
+                </div>
+                    <div class="el1b">
+                        <div class="home">
+                            <p class="p1">About</p>
+                            <p class="line"></p>
+                            <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                        </div>
+                    </div>
+                        <div class="el1b">
+                            <div class="home">
+                                <p class="p1">contact</p>
+                                <p class="line"></p>
+                                <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                            </div>
+                        </div>
+                        
+        </div class="second">
+        <div class="el2" style="margin-top:10vh;">
+            <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.8vh;"></p>
+            <div class="big_line"style="width: 80vh;"></div>
+            <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.6vh;"></p>
+        </div>
+        <div class="photes">
+            <img class="img2"src="./gallery-img-06.jpg" alt="" width="10000vh">
+            <img class="img2"src="./gallery-img-07.jpg" alt="">
+            <img class="img2"src="./gallery-img-08.jpg" alt="">
+            <img class="img2"src="./gallery-img-09.jpg" alt="">
+        </div>
+        <div class="threes_dots">
+            <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color:blue;margin-top:-0.8vh;"></p>
+            <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.8vh;"></p>
+            <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.8vh;"></p>
+        </div>
+        <div class="footer">
+            <p>Copyright 2021 Astro Motion Company Limited.All rights reserved.</p>
+            <p>Designed by TemplateMo</p>
+        </div>
+    </div>
+    </div>
+    <div class="container2">
+        <div class="el1">
+            <h2 class="el1a">Astro Motion</h2>
+            <div class="el1b">
+                <div class="home">
+                    <p class="p1">Gallery</p>
+                    <p class="line"></p>
+                    <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                </div>
+            </div>
+                <div class="el1b">
+                    <div class="home">
+                        <p class="p1">Gallery</p>
+                        <p class="line"></p>
+                        <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                    </div>
+                </div>
+                    <div class="el1b">
+                        <div class="home">
+                            <p style="color: green;">About</p>
+                            <p class="line" style="background-color: green;"></p>
+                            <p style="width:1vw;height: 2vh;background-color:green;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                        </div>
+                    </div>
+                        <div class="el1b">
+                            <div class="home">
+                                <p class="p1">contact</p>
+                                <p class="line"></p>
+                                <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                            </div>
+                        </div>
+        </div>
+        <div class="third_slid">
+            <div class="el31ine" style="margin-top: 12vh;padding-right: 12vh;">
+                <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.8vh;"></p>
+                <div class="big_line"></div>
+                <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.6vh;"></p>
+            </div>
+        <div style="width: 65vh;display: flex;align-content: end;">
+            <div class="card3">
+                <h4 style="color: white; margin-top: 2vh;opacity: 1;color: white;">About our company</h4>
+                <p style="color: white;font-size:2vh;">You are <i>allowed</i> to use Astro Motion HTML Template for your websites.You are not allowed to re-distributed this template ZIP files on any Free CSS template collection website.llegal redistribution is strongly prohibited.</p>
+                <p style="color: white; font-size: 2vh;">Praesent auctror rhoncus arcu,vital blandit est vestibulum sit amet.Integer erat turpis,vestibulun pellentesque aliquam ultricies,firicies,finibus nec dui.Donec bidendum enim mi,at tristique leo feugiat at.Thank you for visiting Template Mo.</p>
+            </div>
+        </div>
+        <div class="el31ine" style="margin-top: 2vh;padding-right: 12vh;">
+            <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.8vh;"></p>
+            <div class="big_line"></div>
+            <p style="height:2vh;width: 2vh;border-radius: 5vh;background-color: white;margin-top:-0.6vh;"></p>
+        </div>
+        </div>
+        <div class="footer">
+            <p>Copyright 2021 Astro Motion Company Limited.All rights reserved.</p>
+            <p>Designed by TemplateMo</p>
+        </div>
+
+    </div>
+    <div class="container3">
+        <div class="el1">
+            <h2 class="el1a">Astro Motion</h2>
+            <div class="el1b">
+                <div class="home">
+                    <p>Home</p>
+                    <p class="line"></p>
+                    <p style="width:1vw;height: 2vh;background-color:white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                </div>
+                </div>
+                <div class="el1b">
+                    <div class="home">
+                        <p class="p1">Gallery</p>
+                        <p class="line"></p>
+                        <p style="width:1vw;height: 2vh;background-color: white;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                    </div>
+                </div>
+                    <div class="el1b">
+                        <div class="home">
+                            <p class="p1">About</p>
+                            <p class="line"></p>
+                            <p style="width:1vw;height: 2vh;background-color:wheat;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                        </div>
+                        </div>
+                        <div class="el1b">
+                            <div class="home">
+                                <p style="color: green;">contact</p>
+                                <p class="line" style="background-color: green;"></p>
+                                <p style="width:1vw;height: 2vh;background-color:green;border-radius: 6vh; margin-top: -3vh;margin-left: 3vh;"></p>
+                            </div>
+                            </div>
+        </div>
+        <div class="last_card">
+            <div class="divided_two" style="margin-top: 4vh;">
+                <h3>Name</h3>
+                <p class="last_line" style="margin-top: -2vh;"></p>
+                <h3 style="margin-top: 1vh;">Email</h3>
+                <p class="last_line" style="margin-top: -2vh;"></p>
+                <h3 style="margin-top: 2vh;">Message</h3>
+                <p class="last_line" style="margin-top: 10vh;"></p>
+            </div>
+            <div class="divided_two">
+                <h4>Contact</h4>
+                <p style="margin-top: -2vh; font-size:2.5vh;">Integer erat turpis,vestibulum pellentesque aliquam ultricies,finibus nec dui.Donec bibendnum enim mi,at tristique leo feugiat at.</p>
+                <p style="margin-top: -1vh;">Email:Info@company.com</p>
+                <p style="margin-top: -2vh;">Tel:010-020-0340</p>
+                <img src="./pebbair.jpeg" alt="" width="160" height="80">
+
+            </div>
+        </div>
+        <div style="display: flex;justify-content:center;margin-top: 30vh;">
+        <button>Send</button>
+        </div>
+        <div class="footer" style="">
+            <p>Copyright 2021 Astro Motion Company Limited.All rights reserved.</p>
+            <p>Designed by TemplateMo</p>
+        </div>
+    </div>
+    
+</body>
+</html>
