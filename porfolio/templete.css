@@ -1,0 +1,25 @@
+.first_img{
+    background-image: url('./lorembg.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+.Loreumheading{
+    margin: 10vh;
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30vh;
+    
+
+}
+.Loreumpara{
+    margin: 10vh;
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let first_operator=parseInt(prompt('enter the first number'));
+        let second_num=parseInt(prompt('enter the second number'));
+        let symbol=prompt('enter the symbol');
+        let result;
+        if (symbol=='+'){
+           result=first_operator+second_num;
+        }
+        else if (symbol=='-'){
+            result=first_operator-second_num;
+        }
+        else if (symbol=='*'){
+            result=first_operator-second_num;
+        }
+        else if (symbol=='/'){
+            result=first_operator-second_num;
+        }
+        else{
+            result=first_operator%second_num;
+        }
+        console.log(result);
+        
+    </script>
+</body>
+</html>

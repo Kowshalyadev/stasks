@@ -1,0 +1,8 @@
+.bg_container{
+    background-color:antiquewhite;
+    height: 100vh;
+    /* text-align: center; */
+}
+.todo-items-container{
+    margin-top: 15vh;
+}

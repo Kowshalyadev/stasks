@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let first_num=parseInt(prompt('enter the first number'));
+        let second_num=parseInt(prompt('enter the second number'));
+        let symbol=prompt('enter the symbol');
+        let result;
+        function cal(first_num,second_num){
+            if (symbol=='+'){
+           console.log(first_num+second_num);
+            }
+            else if (symbol=='-'){
+                result=first_num - second_num;
+            }
+            else if (symbol=='*'){
+                result=first_num*second_num;
+            }
+            else if (symbol=='/'){
+                result=first_num/ second_num;
+            }
+            else{
+                result=first_num%second_num;
+            }
+    
+        }
+        result=cal(first_num,second_num);
+       console.log(result)
+    </script>
+</body>
+</html>
