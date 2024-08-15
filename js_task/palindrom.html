@@ -7,8 +7,31 @@
 </head>
 <body>
     <script>
-        let pali="malayalam";
-        let result;
+        // let pali="Rama";
+        // result=""
+        // for(i=pali.length-1;i>=0;i--){
+        //     result+=pali[i];
+        // }
+        // if(result==pali){
+        //         console.log('true')
+        //     }
+        //     else{
+        //         console.log("false")
+        //     }
+        function pali(num){
+            for(i=num.length-1;i>=0;i--){
+            result+= num[i];
+            }
+            if (result==num){
+                console.log("True")
+            }
+            else{
+                console.log("Flase")
+            }
+        }
+        let num='wow';
+        result='';
+        pali(num)
 
 
     </script>
