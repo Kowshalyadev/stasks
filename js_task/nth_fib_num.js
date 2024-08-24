@@ -1,0 +1,12 @@
+num=7;
+a=0,b=1,i=1
+while(i<=num){
+        if(i==num){
+            console.log(a)
+            break
+        } 
+        c=a+b
+        a=b
+        b=c 
+        i++
+    }

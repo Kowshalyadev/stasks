@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label, legend{
+            color:aliceblue;
+        }
+    </style>
+   
+</head>
+<body style="background-image: url(https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg); background-color: aliceblue;">
+    <fieldset>
+        <legend>Signin</legend>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="eg:john" required><br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname" placeholder="eg:g"><br>
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{4}" placeholder="eg:1234"><br>
+        <label for="fname">EMAIL</label><br>
+        <input type="email" id="fname" name="fname" placeholder="john@gmail.com"><br>
+        <label for="password">password</label><br>
+        <input type="password" id="password" name="password" pattern="[0-9]{4,}"/><br>
+        <label>date of birth</label><br>
+        <input type="date"/><br>
+        <label for="w3review">Review of 10k coders</label><br>
+        <textarea id="w3review" cols="25" rows="2" placeholder="text Review"></textarea><br>
+        <label for="fname">REMEMBER ME</label>
+        <input type="checkbox" id="fname" name="fname"><br>
+        <label>Select one option</label><br>
+        <input type="radio" id="chooseone" name="mention"/>
+        <label for="chooseone">Female</label><br>
+        <input type="radio" id="chooseone" name="mention"/>
+        <label for="chooseone">Male</label><br>
+        <input type="radio" id="chooseone" name="mention"/>
+        <label for="chooseone">other</label><br>
+        <input type="submit" value="submit" formaction="./login_page_register_forgetp.html">
+        <!-- <input type="submit" value="forget_password" formaction="./login_page_register_forgetp.html"/> -->
+    </form>
+</fieldset>
+</body>
+</html>

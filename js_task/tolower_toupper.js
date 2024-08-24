@@ -1,24 +1,15 @@
-// let a="koWShi";
-// let newWord=[];
-// for (i=0;i<a.length;i++){
-//     if (a[i]==a[i].toLowerCase()){        // if (hello[i] == hello[i].toLowerCase()) {
-//         newWord[i]=a[i].toUpperCase();
-//     }
-//     else{
-//         newWord[i]=a[i].toLowerCase();
-//         console.log(newWord[i])
-//     }  
-// }
-// console.log(newWord.join(""));
 
-let sringValues=function(a){
-    for(i=0;i<a.length;i++){
-        if (a[i]==a[i].toLowerCase()){
-            newWord[i]=a[i].toUpperCase();
-            // console.log(newWord[i])
+let stringsValues=function(a){
+    for (num of a){
+        if (num==num.toLowerCase()){
+            newString+=num.toUpperCase()
+        }
+        else if(num==num.toUpperCase()){
+            newString+=num.toLowerCase()
         }
     }
+    console.log(newString)
 }
-let a="koWShi";
-let newWord=[];
-console.log(newWord[i])
+a="somEThinG";
+newString=''
+stringsValues(a)

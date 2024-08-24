@@ -92,24 +92,36 @@ switch (user){
 //     - 3: Europe ($30)
 //     - 4: Asia ($40)
 //     - 5: Australia ($50)
-// let shipping_cost='north America';
-// switch (shipping_cost){
-//     case 'north America':
-//         console.log("$10");
-//     break;
-//     case 'south_america':
-//         console.log("$20");
-//     break;
-//     case 'Europe':
-//         console.log("$30");
-//     break;
-//     case 'asia':
-//         console.log('$40');
-//     break;
-//     case 'australia':
-//         console.log('$50');
-//     break;
-//     default:
-//         console.log("enter the correct shipping");
+let shipping_cost='north America';
+switch (shipping_cost){
+    case 'north America':
+        console.log("$10");
+    break;
+    case 'south_america':
+        console.log("$20");
+    break;
+    case 'Europe':
+        console.log("$30");
+    break;
+    case 'asia':
+        console.log('$40');
+    break;
+    case 'australia':
+        console.log('$50');
+    break;
+    default:
+        console.log("enter the correct shipping");
 
-// }
+}
+// 3. Determine the number of digits in a given number
+
+// - Test case 1: Input: 123, Expected output: 3
+// - Test case 2: Input: 4567, Expected output: 4
+let string=String(123);
+console.log(string.length)
+let count=0;
+for (i=0;i<=string.lenth;i++){
+    console.log(i)
+}
+
+

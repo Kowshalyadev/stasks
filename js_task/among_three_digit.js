@@ -20,9 +20,12 @@ console.log(result);
 //     console.log(i);
 // }
 
-for(i=-1;!(i<-10);i--){
+// for(i=-1;!(i<-10);i--){
+//     console.log(i);
+// }
+for(i=1;!(i==10+1);i++){
     console.log(i);
 }
-for(i=-10;!(i+1>0);i++){
+for(i=10;!(i==0);i--){
     console.log(i);
 }
