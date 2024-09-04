@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./id_card_dom.css">
+</head>
+<body>
+    <script>
+        let divElement=document.createElement("div");
+        divElement.classList.add("d-flex","flex-row","justify-content-center")
+        divElement.style.height="60vh";
+        divElement.style.width="50vh";
+        divElement.style.border="2px solid white";
+        divElement.style.backgroundColor="black";
+        divElement.style.borderRadius="20px"
+        document.body.append(divElement)
+        let h1Element=document.createElement("h2");
+        h1Element.innerHTML="ID CARD";
+        h1Element.style.color="white";
+        h1Element.style.textAlign="center"
+        divElement.appendChild(h1Element);
+        let imgElement=document.createElement("img")
+        imgElement.src="./kowshi_photo.jpeg";
+        imgElement.height="100";
+        imgElement.style.borderRadius="20px";
+        imgElement.classList.add("d-flex","flex-row","justify-content-center")
+        divElement.appendChild(imgElement)
+        let pElement=document.createElement("p")
+        pElement.innerHTML="Name : Kowshalya";
+        pElement.textAlign="center";
+        pElement.style.color="white"
+        divElement.appendChild(pElement)
+        let p1Element=document.createElement("p")
+        p1Element.innerHTML="Branch : CSE";
+        p1Element.textAlign="center";
+        p1Element.style.color="white"
+        divElement.appendChild(p1Element)
+        let p2Element=document.createElement("p")
+        p2Element.innerHTML="College : NRCM";
+        p2Element.textAlign="center";
+        p2Element.style.color="white"
+        divElement.appendChild(p2Element)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="p1"></p>
+    <!-- <button>OTP</button> -->
+    <div id="myContainer"></div>
+    <script>
+        
+        // let btnElement=document.createElement("button");
+        // btnElement.textContent="OTP";
+        // btnElement.onclick=function(){
+        //     console.log("kowshi")
+        // }
+        // console.log(btnElement)
+    //     btnElement.onclick=function(){
+    //     let x="0123456789";
+    //     let otp="";
+    //     let len=x.length
+    //     for(i=0;i<5;i++){
+    //         otp+=x[Math.floor(Math.random()*len)]
+    //     }
+    //     console.log(`OTP OF 5 DIGIT IS : ${otp}`)
+    // }
+    let h1Element = document.createElement("h1");
+    h1Element.textContent = "GET 5 DIGIT OTP";
+
+    let containerElement = document.getElementById("myContainer");
+    containerElement.style.border="2px solid black"
+    // containerElement.style.backgroundColor="red"
+    containerElement.style.textAlign="center"
+    containerElement.style.padding="12vh"
+    containerElement.style.borderRadius="12vh"
+    // containerElement.style.backgroundColor="lightpink"
+    containerElement.appendChild(h1Element);
+
+    let btnElement = document.createElement("button");
+    btnElement.style.backgroundColor="yellow";
+    btnElement.style.width="12vh";
+    btnElement.style.height="8vh";
+    btnElement.style.borderRadius="12vh"
+    btnElement.textContent = "OTP";
+    btnElement.style.border="none"
+    containerElement.appendChild(btnElement);
+    // function bgcolor(){
+    //     containerElement.style.backgroundColor="black";
+    //     btnElement.style.backgroundColor="red"
+    // }
+    const colors=[
+        {
+            text:"pink"
+        },
+        {
+            text:"blue"
+        }
+    ]
+    btnElement.onclick=function(){
+    let x="0123456789";
+    let otp="";
+    let len=x.length
+    var colors = ["#0099cc","#c0c0c0","#587b2e","#990000","#000000","#1C8200","#987baa","#981890","#AA8971","#1987FC","#99081E"];
+    for(i=0;i<5;i++){
+        otp+=x[Math.floor(Math.random()*(len))]
+        let allColors=Math.floor(Math.random()*colors.length);
+        containerElement.style.backgroundColor=colors[`${(Math.random()*10).toPrecision(1)}`];
+        let p1=document.getElementById("p1");
+      
+        btnElement.style.backgroundColor="green";
+       }
+        console.log(`OTP OF 5 DIGIT IS : ${otp}`)
+        h1Element.textContent=otp
+        // h1Element.style.color="blue";
+        // h1Element.style.color="pink"
+
+
+    }
+    // let x=2
+    // if(x%2==0){
+    //     console.log("even")
+    // }
+    // else{
+    //     console.log("odd")
+    // }
+    </script>
+</body>
+</html>
+

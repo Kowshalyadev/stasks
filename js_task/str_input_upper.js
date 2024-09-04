@@ -206,9 +206,17 @@ let x=[
     rating: { rate: 3.6, count: 145 },
   },
 ];
+
+// 1. Filter and Map: Get all product titles of products with a price greater than $50
+
 // x.map((a)=>{
-//     if(a.price>=25)
+//     if(a.price<50)
 //     console.log("title:"+a.title)})
-let res=x.sort()
-let c=res.find()
-console.log(c)
+
+x.map((a)=>{
+      if(a.price>50)
+ console.log("title:"+a.title)})
+// 3. Map and Join: Join all product descriptions into a single string separated by commas.
+console.log(x.map((a)=>x(product)))
+
+  
