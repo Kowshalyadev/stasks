@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bgcontainer{
+            background-color: rgb(42, 47, 97);
+            height: 50vh;
+            width: 50vw;
+            border: 2px solid rgb(255, 153, 0);
+            border-radius: 2vh;
+            text-align: center;
+            
+        }
+        .text{
+            padding: 20px;
+            color: white;
+        }
+        span{
+            color:chartreuse;
+            font-size:5vh;
+        }
+    </style>
+</head>
+<body>
+    <marquee behavior="20" direction="right" id="wish">Happy Ganesh Chaturthi</marquee>
+    <script>
+        let divElement=document.createElement("div");
+        divElement.classList.add("bgcontainer","shadow");
+        document.body.appendChild(divElement);
+        let marqueeElement=document.getElementById("wish");
+        marqueeElement.classList.add("text");
+        divElement.appendChild(marqueeElement);
+        let imgElement=document.createElement("img");
+        imgElement.setAttribute("src","https://media.istockphoto.com/id/1262196234/photo/lord-ganesha-ganesha-festival-lord-ganesha-on-colorful-background.jpg?s=612x612&w=0&k=20&c=J1PSlS_VeLsvv_ljmGB1Ano6InBdcKvggC0w5h71e8w=");
+        imgElement.style.height="20vh";
+        imgElement.style.borderRadius="12px";
+        divElement.appendChild(imgElement);
+        let h1Element=document.createElement("p");
+        h1Element.innerHTML="All are welcome <span>yuvasena youth</span> Ganesh chaturthi";
+        h1Element.style.color="white";
+        divElement.appendChild(h1Element)
+
+    </script>
+</body>
+</html>

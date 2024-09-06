@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form id="files">
+    <input type="file" id="ip1">
+    <input type="submit">
+    <img id="p1"></img>
+   </form>
+   <script>
+    let form=document.getElementById("files");
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        let p1=document.getElementById("p1");
+        let ip1=document.getElementById("ip1");
+        console.log(ip1.files)
+        const reader=new FileReader();
+        reader.onload=(e)=>{
+           console.log(e.target.result);
+        }
+        reader.readAsDataURL(ip1.files[0]);
+        
+    })
+   </script>
+</body>
+</html>

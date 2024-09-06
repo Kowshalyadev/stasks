@@ -1,8 +1,8 @@
-num=[30,40,40,50,50,30]
+num=prompt().split(" ").map(Number)//[30,50,30,50,20,50,50,20,50,50,50]
 emp={},sum=0
 for(i of num){
     emp[i]=(emp[i]||0)+1
-    console.log(emp)
+    // console.log(emp)
     if(emp[i]==2){
         sum++
         emp[i]=0

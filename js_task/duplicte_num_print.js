@@ -1,7 +1,8 @@
-arr=prompt().split(",").map(Number)//[23,33,200,785]
+arr=[23,33,200,785]
 res=[]
 for(i of arr){
     istring=String(i)
+    console.log(istring)
     c=0
     for(j=0;j<istring.length;j++){
         if(istring[j+1]==istring[j]){

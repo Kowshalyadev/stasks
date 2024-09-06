@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./id_card_dom.css">
+    <style>
+        .centerid{
+            /* display: flex;
+            justify-content: center; */
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <script>
         let divElement=document.createElement("div");
-        divElement.classList.add("d-flex","flex-row","justify-content-center")
+        divElement.classList.add("centerid")
         divElement.style.height="60vh";
         divElement.style.width="50vh";
         divElement.style.border="2px solid white";
