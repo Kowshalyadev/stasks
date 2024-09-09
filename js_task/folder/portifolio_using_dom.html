@@ -4,8 +4,326 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./portfolio.css">
+    <link rel="stylesheet" href="./portfolio.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        *{
+    box-sizing: border-box;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    /* border: 2px solid; */
+}
+button{
+    border-radius: 120vh;
+    /* border: 2px solid; */
+}
+.card1{
+    /* /* height: 48vh; */
+    width: 100%; 
+    padding:200px;
+    background-color: antiquewhite;
+    /* display: grid;
+    justify-content: center; */
+    text-align: center;
+    border-radius: 12px;
+    /* border: 2px solid; */
+}
+.medal{
+    height: 12vh;
+    width: 29vw;
+    padding-top:2vh;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+h6 p{
+    font-size: 4vh;
+    font-family: "Roboto";
+}
+.myskills{
+    border: 2px solid;
+}
+.medal1{
+    /* height: 12vh;
+    width: 50vw;
+    padding-top:2vh; */
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+.card2{
+    height: 48vh;
+    width: 40vh;
+    /* background-color: antiquewhite; */
+    /* display: grid;
+    justify-content: center; */
+    text-align: center;
+    border-radius: 12px;
+    /* border: 2px solid; */
+}
+li{
+    list-style: none;
+    font-size: 4vh;
+}
+/* .ions{
+    height: 6vh;
+    width: 12vh;
+} */
+button{
+    border-radius: 12vh;
+}
+.card3{
+    /* height: 48vh;
+    width: 40vh; */
+    /* background-color: antiquewhite; */
+    /* display: grid;
+    justify-content: center; */
+    text-align: center;
+    border-radius: 12px;
+}
+input:hover{
+    background-color: darkgoldenrod;
+}
+input{
+    background-color: antiquewhite;
+    border-radius: 3vh;
+
+}
+/* ion-icon{
+    height: 10px;
+} */
+
+    </style>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="navbar">
+        <a class="navbar-brand text-white" href="#">Kowshalya Gurram</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto" style="font-size: 1vh;">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="#aboutdetails">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#skillsdetails">Skills</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-white" href="#projectdetails">Projects</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link disabled text-white" href="#contactdetails">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+       
+        <script>
+         let navEllement=document.getElementById("navbar");
+         let containerdiv=document.createElement("div");
+         containerdiv.classList.add("container","m-5");
+         containerdiv.style.alignContent="center"
+         document.body.appendChild(containerdiv);
+         
+         let rowdiv=document.createElement("div");
+         rowdiv.classList.add("row");
+         containerdiv.appendChild(rowdiv);
+
+         let coldiv=document.createElement("div");
+         coldiv.classList.add("col-12","col-md-12","col-lg-12","col-xlg-12","mb-3","mt-5","shadow");
+         coldiv.style.backgroundColor="#6708";
+         rowdiv.appendChild(coldiv);
+
+         let imgdiv=document.createElement("div");
+         imgdiv.classList.add("d-flex","flex-row","p-3","justify-content-strat");
+         coldiv.appendChild(imgdiv);
+
+         let imgElement=document.createElement("img");
+         imgElement.setAttribute("src","./kowshi_photo.jpeg");
+         imgElement.style.height="40vh";
+         imgElement.style.borderRadius='2vh';
+         imgdiv.appendChild(imgElement);
+         
+         let firstContent=document.createElement("div");
+         firstContent.classList.add("col-12","col-md-6","col-lg-6","col-xlg-6","p-4","mb-3","mt-5","shadow");
+         firstContent.style.backgroundColor="#67083";
+         imgdiv.appendChild(firstContent)
+
+         let pElement=document.createElement("p");
+        //  pElement.classList.add("d-flex","justify-content-center");
+         pElement.innerHTML="Hello,I'm";
+         firstContent.appendChild(pElement);
+
+        let brElement=document.createElement("br");
+        brElement.classList.add("d-flex","flex-column");
+        pElement.appendChild(brElement);
+
+         let h4Element=document.createElement("h4");
+         h4Element.classList.add("d-flex");
+         h4Element.innerHTML="Kowshalya Gurram";
+         firstContent.appendChild(h4Element);
+         
+         let h4Element1=document.createElement("p");
+         h4Element1.classList.add("d-flex","flex-content-center","flex-column");
+         h4Element1.innerHTML="Fortend Developer";
+         firstContent.appendChild(h4Element1)
+
+         let linkDiv=document.createElement("div");
+         linkDiv.classList.add("col-12","col-md-12","col-lg-12","d-flex","flex-row");
+         firstContent.appendChild(linkDiv);
+
+         let ulElement=document.createElement("ul");
+         ulElement.classList.add("d-flex");
+         linkDiv.appendChild(ulElement);
+
+         let liElement=document.createElement("li");
+         ulElement.appendChild(liElement);
+
+         let aElement=document.createElement("a");
+         aElement.setAttribute("href","../porfolio/newresumekoeshi.pdf");
+         aElement.innerHTML="newresume";
+         liElement.appendChild(aElement);
+
+            //skills
+        let secondPart=document.createElement("div");
+        secondPart.classList.add("col-12","col-md-12","col-lg-12","col-xlg-12","shadow","d-flex","justify-content-center");
+        rowdiv.appendChild(secondPart);
+
+        let pElementSeconPart=document.createElement("p");
+        // pElementSeconPart.classList.add("d-flex","justify-content-center","p-4");
+        // pElementSeconPart.style.alignContent="center"
+        pElement.innerHTML="GET To Know More";
+        secondPart.appendChild(pElement);
+
+        let h6ElementSecondPart=document.createElement("h6");
+        // h6ElementSecondPart.classList.add("d-flex","flex-column","justify-content-center");
+        h6ElementSecondPart.innerHTML="About Me";
+        pElement.appendChild(h6ElementSecondPart);
+
+        let card1div=document.createElement("div");
+        card1div.classList.add("col-12","col-md-12","col-lg-12","pt-5","shadow","d-flex","justify-content-center");
+        // card1div.getElementById("skillsdetails");
+        rowdiv.appendChild(card1div);
+
+
+        let codermaindiv=document.createElement("div");
+        codermaindiv.classList.add("col-12","col-md-12","col-lg-12","p-5","shadow");
+        rowdiv.appendChild(codermaindiv);
+
+        let codersubdiv=document.createElement("div");
+        codermaindiv.classList.add("card1");
+        codermaindiv.appendChild(codersubdiv);
+
+        let coderimgElement=document.createElement("img");
+        coderimgElement.setAttribute("src","./image.png");
+        coderimgElement.style.height="20vh";
+        coderimgElement.classList.add("p-3");
+        codersubdiv.appendChild(coderimgElement);
+
+        let coderh5Element=document.createElement("h5");
+        coderh5Element.innerHTML="10000 Coders";
+        codermaindiv.appendChild(coderh5Element);
+
+       let coderpElement=document.createElement("p");
+       coderpElement.innerHTML="i am doing coaching in 10000 coders";
+       codermaindiv.appendChild(coderpElement);
+
+       let coder1maindiv=document.createElement("div");
+        coder1maindiv.classList.add("col-12","col-md-12","col-lg-12","pt-5","shadow");
+        card1div.appendChild(coder1maindiv);
+
+        let coder1subdiv=document.createElement("div");
+        codermaindiv.classList.add("card1");
+        codermaindiv.appendChild(coder1subdiv);
+
+        let coderimg1Element=document.createElement("img");
+        coderimg1Element.setAttribute("src","./image.png");
+        coderimg1Element.style.height="20vh";
+        coderimg1Element.classList.add("p-3");
+        coder1subdiv.appendChild(coderimg1Element);
+
+        let coderh5Element1=document.createElement("h5");
+        coderh5Element1.innerHTML="Education";
+        codermaindiv.appendChild(coderh5Element1);
+
+       let coderpElement1=document.createElement("p");
+       coderpElement1.innerHTML="Narasimha Reddy Engineering College completed my bachelore degree";
+       codermaindiv.appendChild(coderpElement1);
+
+
+       //contact
+
+       let contactMainDiv=document.createElement("div");
+       contactMainDiv.classList.add("col-12","col-md-12","col-lg-12","col-xlg-12","shadow","pt-3","m-2");
+       contactMainDiv.style.backgroundColor="darkgray";
+       codermaindiv.append(contactMainDiv);
+
+       let contactpElement=document.createElement("p");
+    //    contactpElement.classList.add("d-flex","justify-content-center");
+       contactpElement.innerHTML="Contact me";
+       contactMainDiv.appendChild(contactpElement);
+   
+    let iconDiv=document.createElement("div");
+    iconDiv.classList.add("col-12","col-md-12","col-lg-12","p-3");
+    iconDiv.style.justifyContent="space-between";
+    iconDiv.style.border="2px solid";
+    iconDiv.style.borderRadius="2px";
+    contactpElement.appendChild(iconDiv);
+
+    let formElement=document.createElement("form");
+    formElement.classList.add("d-flex","justify-content-center")
+    iconDiv.appendChild(formElement);
+
+    let inputElement=document.createElement("input");
+    inputElement.setAttribute("type","submit");
+    inputElement.setAttribute("value","mail");
+    formElement.appendChild(inputElement);
+
+    let form2Element=document.createElement("form");
+    form2Element.setAttribute("action","https://www.linkedin.com/in/kowshalya-gurram-508367259/");
+    iconDiv.appendChild(form2Element);
+
+    let inputElement2=document.createElement("input");
+    inputElement2.setAttribute("type","submit");
+    inputElement2.setAttribute("value","linkedIn");
+    form2Element.appendChild(inputElement2);
+          
+    let skiilsdiv=document.createElement("div");
+    skiilsdiv.classList.add("col-12","col-md-12","col-lg-12","pt-2");
+    iconDiv.appendChild(skiilsdiv);
+
+    let p1element=document.createElement("p");
+    p1element.innerHTML="About";
+    skiilsdiv.appendChild(p1element);
+
+    let p2element=document.createElement("p");
+    p2element.innerHTML="Skills";
+    p1element.appendChild(p2element);
+
+    let p3element=document.createElement("p");
+    p3element.innerHTML="contact";
+    p2element.appendChild(p3element);
+
+    let lastDiv=document.createElement("div");
+    lastDiv.classList.add("col-12","col-md-12","col-lg-12","d-flex","justify-contenet-space-between");
+    iconDiv.appendChild(lastDiv);
+
+    let lastpElement=document.createElement("p");
+    lastpElement.innerHTML="Copyright@ 2024 @kowshalya Gurram Pebbair.";
+    lastDiv.appendChild(lastpElement);
+
+    let lastP1Element=document.createElement("p");
+    lastP1Element.innerHTML="All RightsReser";
+    lastDiv.appendChild(lastP1Element);
+        </script>
 </body>
 </html>

@@ -1,22 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-   
+  </head>
+  <style>
+    #div1{
+        border: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .usersBox {
+      background-color: rgb(233, 255, 220);
+      border: 2px solid black;
+    }
+    .usersBox:hover{
+        font-size: 4vh;
+    }
+  </style>
+  <body>
+    <div id="div1"></div>
+    <div class="container"></div>
+
     <script>
-     var imgs=["https://images.ctfassets.net/kftzwdyauwt9/6Hpmny9K2Z8Xxget5bmlWa/66634b4c69faef5600e5ea48f499ba5e/Anastronautridingahorseinaphotorealisticstyle6.jpg?w=3840&q=90&fm=webp" , "https://thumbs.dreamstime.com/z/vinayagar-images-ai-hd-photo-2023-289916691.jpg" , "https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg"];
-     let x=(imgs.length);
-     for(i=0;i<x;i++){
-     let div=document.createElement("div")
-     document.body.appendChild(div);
-     let img=document.createElement("img");
-     img.setAttribute("src",random(imgs[(i)]));
-     div.appendChild(img)
-     }
+      let arr = [
+        {
+          name: "Sowmya",
+          image:"./sowmya.jpeg",
+          branch: "ECE",
+        },
+        {
+          name: "kowshi",
+          image:"./kowshi_photo.jpeg",
+          branch: "CSE",
+        },
+        {
+          name: "Kalpana",
+          image:"./kalpi.jpeg",
+          branch: "BSC",
+        },
+        {
+          name: "Hari",
+          image:"./hari.jpeg",
+          branch: "Inter",
+        },
+      ];
+      let button = document.createElement("button");
+      button.innerHTML = "add";
+      document.body.appendChild(button);
+      button.onclick = function () {
+        let div1 = document.getElementById("div1");
+        document.body.appendChild(div1)
+        const usersBox = document.createElement("div");
+        usersBox.className = "usersBox";
+        div1.appendChild(usersBox);
+        arrIndex = Math.floor(Math.random() * arr.length);
+        let img=document.createElement("img");
+        img.setAttribute("src",`${arr[arrIndex].image}`);
+        img.style.height="30vh";
+        img.style.width="20vh";
+        usersBox.appendChild(img);
+        let p = document.createElement("p");
+        p.innerHTML = `Name : ${arr[arrIndex].name}`;
+        usersBox.appendChild(p);
+        let p1 = document.createElement("p");
+        p1.innerHTML=`Branch : ${arr[arrIndex].branch}`;
+        p.appendChild(p1)
+        // let p1=document.createElement("p");
+        // p.innerHTML=`branch : ${arr[arrIndex].branch}`;
+        // img.appendChild(p1)
+
+      };
     </script>
-</body>
+  </body>
 </html>
