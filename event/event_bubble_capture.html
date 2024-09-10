@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       div{
+        display: inline-block;
+        border: 1px solid black;
+        padding: 15px;
+        cursor: pointer;
+        background: white;
+       }
+       div:hover{
+        border: 1px solid rgb(81, 255, 0);
+        background-color: cornflowerblue;
+       }
+    </style>
+</head>
+<body>
+   <div class="parent">P
+    <div class="child">C
+        <div class="grandChild">GC
+            <div class="grandGrandChild">GGC
+            </div>
+        </div>
+    </div>
+   </div>
+   <button id="clear">clear all</button>
+   <P id="log"></P>
+   <script>
+    let parent=document.getElementsByClassName("parent");
+    let child=document.getElementsByClassName("child");
+    let grandChild=document.getElementsByClassName("grandChild");
+    let grandGrandChild=document.getElementsByClassName("grandGrandChild");
+    let p = document.getElementById("log")
+    parent[0].addEventListener("click",(e)=>{
+        console.log("parent is click")
+        
+    },true)//capture
+    child[0].addEventListener("click",(e)=>{
+        // e.stopImmediatePropagation();
+        p.innerHTML="child is click";
+    })
+    grandChild[0].addEventListener("click",()=>{
+        p.innerHTML="grand child is click";
+    })
+    grandGrandChild[0].addEventListener("click",()=>{
+        p."grand grand child is click");
+    })
+//     function clearOutput() {
+//     p.innerHTML = "";
+// }
+//     let button=document.getElementById("clear");
+//     button.addEventListener("click",clearOutput)
+
+   </script>
+</body>
+</html>
