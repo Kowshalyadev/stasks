@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .containers{
+            border: 2px solid black;
+            background-color: lightcoral;
+            height: 60vh;
+            width: 40vh;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+
+        }
+        img{
+            height: 20vh;
+            width: 30vh;
+            border-radius: 20px;
+            margin-top: -20px;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        let container=document.createElement("div");
+        container.classList.add("containers");
+        document.body.appendChild(container);
+
+       let h6=document.createElement("h6");
+       h6.style.textAlign="center"
+       h6.innerHTML="ID CARD";
+       container.appendChild(h6);
+
+       let img=document.createElement("img");
+       img.style.textAlign="center";
+       img.setAttribute('src','kowshi_photo.jpeg');
+       container.appendChild(img);
+
+       let div=document.createElement("div");
+       div.style.textAlign="center";
+       container.appendChild(div)
+
+       let p=document.createElement("p");
+       p.innerHTML="Name:Kowshalya<br>Branch:CSE<br>P.No:8888888";
+       div.appendChild(p)
+    </script>
+</body>
+</html>

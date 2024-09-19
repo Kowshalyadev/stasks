@@ -1,0 +1,11 @@
+num=prompt("enter").split(",")
+revNum=num.reverse()
+length_rev=revNum.length
+res=0
+for(i=0;i<=length_rev-1;i++){
+    if(i%2==0){
+        console.log(revNum[i])
+        res+=Number(revNum[i])
+    }
+}
+console.log(res)

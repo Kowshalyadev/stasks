@@ -27,8 +27,12 @@
         </div>
     </div>
    </div>
-   <button id="clear">clear all</button>
+   <!-- <button id="clear">clear all</button> -->
    <P id="log"></P>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
    <script>
     let parent=document.getElementsByClassName("parent");
     let child=document.getElementsByClassName("child");
@@ -36,18 +40,22 @@
     let grandGrandChild=document.getElementsByClassName("grandGrandChild");
     let p = document.getElementById("log")
     parent[0].addEventListener("click",(e)=>{
-        console.log("parent is click")
+        let p0=document.getElementsByTagName("p")
+        p0[0].innerHTML="parent is click";
         
     },true)//capture
     child[0].addEventListener("click",(e)=>{
-        // e.stopImmediatePropagation();
-        p.innerHTML="child is click";
+        e.stopImmediatePropagation();
+        let p1=document.getElementsByTagName("p");
+        p1[1].innerHTML="child is click";
     })
     grandChild[0].addEventListener("click",()=>{
-        p.innerHTML="grand child is click";
+        let p2=document.getElementsByTagName("p")
+        p2[2].innerHTML="grand child is click";
     })
     grandGrandChild[0].addEventListener("click",()=>{
-        p."grand grand child is click");
+        let p3=document.getElementsByTagName("p")
+        p3[3].innerHTML="grand grand child is click";
     })
 //     function clearOutput() {
 //     p.innerHTML = "";

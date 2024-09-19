@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid;
+            display: inline-block;
+            padding: 15px;
+            cursor: pointer;
+            /* background-color: aliceblue; */
+        }
+        /* div:hover{
+            border: 2px solid rgb(237, 250, 210);
+            background-color: rgb(0, 255, 119);
+        } */
+        #grandChild{
+            background-color: aquamarine;
+        }
+        #child{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">P
+        <div id="child">C
+            <div id="grandChild">G
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <script>
+        let parent=document.getElementById("parent");
+        let child=document.getElementById("child");
+        let grandChild=document.getElementById("grandChild");
+        // let texts=document.getElementsByTagName("p");
+        parent.addEventListener("click",()=>{
+            let texts=document.getElementsByTagName("p");
+            texts[0].innerHTML="parent";
+        })
+        child.addEventListener("click",()=>{
+            let text2=document.getElementsByTagName("p");
+            texts2[1].innerHTML="Child";
+        })
+        grandChild.addEventListener("click",()=>{
+            let text3=document.getElementsByTagName("p");
+            texts3[1].innerHTML="grandChild";
+        })
+
+    </script>
+</body>
+</html>
