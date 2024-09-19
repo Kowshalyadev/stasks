@@ -44,14 +44,23 @@
         button.addEventListener("click",()=>{
          let userEnteredText=flabel.value;
          localStorage.setItem("Name",userEnteredText);
+         sessionStorage.setItem("Name",userEnteredText);
+
          let userEnteredLast=lastname.value;
          localStorage.setItem("Last Name",userEnteredLast);
+         sessionStorage.setItem("Last Name",userEnteredLast);
+
          let userEnteredEmail=email.value;
          localStorage.setItem("Email",userEnteredEmail);
+         sessionStorage.setItem("Email",userEnteredEmail);
+
          let userEnteredPassword=password.value;
          localStorage.setItem("Password",userEnteredPassword);
+         sessionStorage.setItem("Password",userEnteredPassword);
+
          let userEntereddob=dob.value;
          localStorage.setItem("DOB",userEntereddob);
+         sessionStorage.setItem("DOB",userEntereddob);
         })
 
     </script>
