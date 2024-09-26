@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+           border: 2px solid;
+           background-color:khaki;
+           padding: 30px;
+           text-align: center;
+           border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <label for="text1">Roll No</label>
+        <input type="text" id="text1"><br><br>
+        <span id="sp1" style="display: none;">eg:20X01A0***</span>
+
+        <label for="text2">User Name</label>
+        <input type="text" id="text2"><br><br>
+        <span id="sp2" style="display: none;">Only Contain letters</span>
+
+        <label for="tel1">Mobile No</label>
+        <input type="tel" id="tel1"><br><br>
+        <span id="sp3" style="display: none;">contain 10 digits</span>
+
+        <label for="paswd">Passsword</label>
+        <input type="password" id="paswd"><br><br>
+        <span id="sp4" style="display: none;">At least contain 10-15 char</span>
+
+        <input type="submit" id="s1" formaction="./formv.html">
+    </form>
+    <script>
+        // let form=document.getElementById("form");
+        // let text1=document.getElementById("text1");
+        // let sp1=document.getElementById("sp1");
+        // let text1Pattern=/^20X01A0[0-9]{3}/
+        // // 20X01A0573
+
+        // let text2=document.getElementById("text2");
+        // let sp2=document.getElementById("sp2");
+        // let text2Pattern=/^[A-Z][a-z]/
+        // // Kowshalya
+
+        // let tel1=document.getElementById("tel1");
+        // let sp3=document.getElementById("sp3");
+        // // var str='0123456789';
+        // let tel1Pattern=/^\d{10}$/;
+        // // let result=tel1.match(tel1Pattern);
+        // // 7989495211
+
+        // let paswd=document.getElementById("paswd");
+        // let sp4=document.getElementById("sp4");
+        // let paswdPattern=/^\d{10,16}$/
+
+
+        // let s1=document.getElementById("s1")
+        form.addEventListener("submit",(e)=>{
+           e.preventDefault()
+            let form=document.getElementById("form");
+        let text1=document.getElementById("text1");
+        let sp1=document.getElementById("sp1");
+        let text1Pattern=/^20X01A0[0-9]{3}/
+        // 20X01A0573
+
+        let text2=document.getElementById("text2");
+        let sp2=document.getElementById("sp2");
+        let text2Pattern=/^[A-Z][a-z]/
+        // Kowshalya
+
+        let tel1=document.getElementById("tel1");
+        let sp3=document.getElementById("sp3");
+        // var str='0123456789';
+        let tel1Pattern=/^\d{10}$/;
+        // let result=tel1.match(tel1Pattern);
+        // 7989495211
+
+        let paswd=document.getElementById("paswd");
+        let sp4=document.getElementById("sp4");
+        let paswdPattern=/^\d{10,16}$/
+
+
+        let s1=document.getElementById("s1")
+           if(!text1Pattern.test(text1.value)){
+            text1.style.border="2px solid red";
+            sp1.style.display="block"
+             
+           }
+           else if(text1Pattern.test(text1.value)){
+            text1.style.border="2px solid green"
+           }
+
+           if(!text2Pattern.test(text2.value)){
+            text2.style.border="2px solid red";
+            sp2.style.display="block"
+             
+           }
+           else if(text2Pattern.test(text2.value)){
+            text2.style.border="2px solid green"
+           }
+
+           if(!tel1Pattern.test(tel1.value)){
+            tel1.style.border="2px solid red";
+            sp3.style.display="block"
+             
+           }
+           else if(tel1Pattern.test(tel1.value)){
+            tel1.style.border="2px solid green"
+           }
+
+           if(!paswdPattern.test(paswd.value)){
+            paswd.style.border="2px solid red";
+            sp4.style.display="block"
+             
+           }
+           else if(tel1Pattern.test(tel1.value)){
+            paswd.style.border="2px solid green"
+           }
+
+           
+
+        })
+    </script>
+</body>
+</html>

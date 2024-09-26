@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formData">
+        <input type="text" id="ip1">
+        <input type="text" id="ip2">
+        <input type="submit" id="btn">
+    </form>
+    <script>
+        let formid=document.getElementById("formData");
+        btn.addEventListener("submit",()=>{
+            let ip1=document.getElementById("ip1")
+            let ip2=document.getElementById("ip2")
+            let obj={name:ip1.value,city:ip2.value}
+            localStorage.setItem("userText",JSON.stringify(obj))
+        })
+    </script>
+</body>
+</html>

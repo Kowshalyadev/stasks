@@ -1,12 +1,11 @@
 rows=+prompt("enter the rows : ")
-
 for(i=1;i<=rows;i++){
     res=""
-    for(j=1;j<=i;j++){
+    for(j=1;j<=rows;j++){
         if(i==j)
         res+=i+" "
         else if(i+j==rows+1)
-        res=res+((rows-i)+1)+" "
+        res=res+(rows-i)+1+" "
         else
         res+="  "
     }

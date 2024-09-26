@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            font-family: sans-serif;
+            background-color:rgb(130, 80, 18)
+            ;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            background-color: #ecf3ee;
+        }
+        .cal{
+            box-shadow: 6px 6px 13px #fff,6px 6px 13px rgba(0,0,0,16);
+            border-radius: 28px;
+            padding: 16px;
+            display: grid;
+            grid-template-columns: repeat(4,66px);
+        }
+        input{
+           grid-column: span 4;
+           height: 68px;
+           box-shadow: inset -6px -6px 13px #fff,
+                       inset 6px 6px 13px rgba(0,0,0,16);
+            background-color: #ecf0f3;
+            border: none;
+            border-radius: 32px;
+            color: rgb(26,25,25);
+            text-align: end;
+            margin: 40px 0px 30px 0px;
+            padding: 20px;
+            font-size: 40px;
+           width: 258px;
+        }
+        button{
+           box-shadow: inset 6px 6px 13px #fff,
+                       inset 6px 6px 13px rgba(0,0,0,16);
+            background-color: #ecf0f3;
+            border: none;
+            border-radius: 50%;
+            margin:10px;
+            font-weight: bold;
+            font-size: 20px;
+            width:50px;
+            height: 50px;
+
+        }
+        @keyframes animi1 {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        button:hover{
+            animation-name:animi1;
+            animation-duration: 1s;
+            animation-timing-function:ease-out;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1" class="container">
+        <div class="cal">        
+            <input type="text" id="dispaly"/>
+            <button onclick="addValue('7')" style="font-size:20px;">7</button>
+            <button onclick="addValue('8')" style="font-size:20px;">8</button>
+            <button onclick="addValue('9')" style="font-size:20px;">9</button>
+            <button onclick="result()" style="font-size:20px;color: blue;">=</button>
+            <button onclick="addValue('4')" style="font-size:20px;">4</button>
+            <button onclick="addValue('5')" style="font-size:20px;">5</button>
+            <button onclick="addValue('6')" style="font-size:20px;">6</button>
+            <button onclick="addValue('*')" id="AC" style="font-size:20px; color: blue;">*</button>
+            <button onclick="addValue('1')" style="font-size:20px;">1</button>
+            <button onclick="addValue('2')" style="font-size:20px;">2</button>
+            <button onclick="addValue('3')" style="font-size:20px;">3</button>
+            <button onclick="addValue('+')" style="font-size:20px; color: blue;">-</button>
+            <button onclick="addValue('%')" style="font-size:20px;">%</button>
+            <button onclick="addValue('0')" style="font-size:20px;">0</button>
+            <button onclick="addValue('.')" style="font-size:20px;">.</button>
+            <button onclick="addValue('+')" style="font-size:20px; color: blue;">+</button>
+            <button onclick="clr()" style="font-size:20px;background-color: red;">Ac</button>
+            <button onclick="addValue('00')" style="font-size:20px;">00</button>
+            <button onclick="del()" style="font-size:20px;">del</button>
+            <button onclick="addValue('%')" style="font-size:20px; color: blue;">%</button>
+    </div>
+        <p id="p1"></p>
+    </div>
+
+    <script>
+        let div1=document.getElementById("div1")
+        let p=document.getElementById("p1");
+        let exp=document.getElementById("dispaly");//input
+        let ac=document.getElementById("AC")
+        function addValue(x){
+            exp.value+=x
+        }
+        function result(){
+            try{
+                exp.value=eval(exp.value)
+                // let cal=eval(exp.value)
+                // exp.value=cal
+            }
+            catch(err){
+                alert("enter the valid expression")
+            }
+        }
+        function clr(){
+            exp.value=""
+        }
+        function del(){
+            exp.value=exp.value.slice(0,-1);
+        }
+    </script>
+</body>
+</html>
