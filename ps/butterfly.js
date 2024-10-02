@@ -14,7 +14,7 @@ for(i=1;i<=2*rows-1;i++){
         
     }
     if(i==rows){
-        console.log(res+res.slice(1))
+        console.log(res+res.slice(0,1))
     }
     else{
         console.log(res+"  ".repeat(space)+res.split(" ").reverse().join(" "))

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        div{
+            background-color: aqua;
+            height: 50vh;
+            width: 50vh;
+            text-align: center;
+        }
+        input{
+            box-shadow: inset -6px -6px 13px #b55372,
+                       inset 6px 6px 13px rgba(0,0,0,16);
+            background-color: #ecf0f3;
+            border: none;
+            margin: 20px;
+            height: 20px;
+            text-align: center;
+        }
+        .imgContainer{
+              background-color: aqua;
+            height: 50vh;
+            width: 50vh;
+            text-align: center;
+        }
+        #timer{
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainConatainer">
+    <div>
+        <input type="text" id="defuser"><br>
+        <!-- <div class="imgContainer"> -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Cartoon_Woman_Carrying_A_Time_Bomb.svg" alt="BOM" height="130vh">
+        <p class="timer-display" id="timer"></p>
+    </div>
+    </div>
+    <script>
+        let timerE1=document.getElementById("timer");
+        let inputElement=document.getElementById("defuser");
+        let countdown=10
+        let inveravalID=setInterval(function(){
+            countdown=countdown-1
+            timerE1.textContent=countdown
+            if(countdown===0){
+                timerE1.textContent="BOOM!!!"
+                clearInterval(inveravalID)
+            }
+        },1000)
+
+        inputElement.addEventListener("keydown",function(event){
+            let bombdefuserText=inputElement.value;
+            if(event.key==="Enter" && bombdefuserText==="defuse" && countdown!==0){
+                timerE1.textContent="you did it!!";
+                clearInterval(inveravalID)
+            }
+        });
+    </script>
+</body>
+</html>
