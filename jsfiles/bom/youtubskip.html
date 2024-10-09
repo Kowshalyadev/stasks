@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+     
+Greasy Fork
+Sign in 
+English (en)
+Scripts Forum Help More
+Info
+Code
+History
+Feedback (9)
+Stats
+YouTube - Ad Skip
+Skips and removes ads on YouTube automatically
+
+Install this script?
+Ask a question, post a review, or report the script.
+AI-powered AgentQL: Forget fragile selectors and locate element as sites change. Try in Playground!
+Ads by EthicalAds
+// ==UserScript==
+// @name         YouTube - Ad Skip
+// @version      1.0
+// @description  Skips and removes ads on YouTube automatically
+// @author       Bobocato
+// @match        https://www.youtube.com/*
+// @grant        none
+// @namespace https://greasyfork.org/users/167089
+// ==/UserScript==
+ 
+const equalText1 = "Skip Ads";
+const equalText2 = "Skip Ad";
+ 
+function addNewStyle(newStyle) {
+    var styleElement = document.getElementById('styles_js');
+    if (!styleElement) {
+        styleElement = document.createElement('style');
+        styleElement.type = 'text/css';
+        styleElement.id = 'styles_js';
+        document.getElementsByTagName('head')[0].appendChild(styleElement);
+    }
+    styleElement.appendChild(document.createTextNode(newStyle));
+}
+ 
+function skipAd(){
+    console.log("Tried to skip a ad");
+    if(document.getElementsByClassName("ytp-ad-skip-button").length > 0){
+        if(document.getElementsByClassName("ytp-ad-skip-button")[0].childNodes[0].textContent === equalText1 || document.getElementsByClassName("ytp-ad-skip-button")[0].childNodes[0].textContent === equalText2){
+            document.getElementsByClassName("ytp-ad-skip-button")[0].click();
+        } else {
+            setTimeout(skipAd(), 1000);
+        }
+    }
+}
+ 
+(function() {
+    'use strict';
+    addNewStyle('.ytp-ad-overlay-slot {display:none !important;}');
+    setInterval(function (){
+        if(window.location.href.substring(0,30) == "https://www.youtube.com/watch?"){
+            skipAd();
+        }
+    }, 2500);
+})();
+    </script>
+</body>
+</html>

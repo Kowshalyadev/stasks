@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ytp-ad-skip-button{
+            background-color:cadetblue;
+            border-radius: 3px;
+            border: 0px;
+            box-shadow: 1px 4px 8px 1px rgba(194, 92, 92, 0.2);
+        }
+        /* div{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s");    
+        } */
+
+    </style>
+</head>
+<body>
+    <div>
+       
+    <button class="ytp-ad-skip-button">addskip</button>
+    </div>
+    <script>
+    
+
+let remainingTime=5;
+let allowedToSkip=false;
+const skipButton = document.querySelector('.ytp-ad-skip-button'); 
+skipButton.addEventListener("click",clickSkipAd)
+function clickSkipAd(){ 
+        // skipButton.click(); 
+        skipButton.innerHTML=`skip in ${remainingTime}s`;
+        remainingTime--
+    if(remainingTime<0) { 
+        allowedToSkip=true
+        skipButton.innerHTML="skip"
+        // console.log('No ad to skip.'); 
+    } 
+}
+setInterval(clickSkipAd, 1000);   
+
+    </script>
+</body>
+</html>
