@@ -1,32 +1,34 @@
 import React,{ Component } from "react";
 class UpdatingPhase extends Component{
-    constructor(){
-        super()
-        this.state={count:1}
+    constructor(props){
+        super(props)
+        this.state={count:1,color:"green"}
     }
     componentDidUpdate(pvsProps,prvsState){
         console.log(prvsState.count)
-        console.log(this.state)
-        // if(prvsState.count!==this.state.count){
-        //     console.log(`count value updateted ${this.sate.count}`)
-        // }
+        console.log(this.state.count)
+        if(prvsState.count!==this.state.count){
+            console.log(`count value updateted ${this.state.count}`)
+        }
 
     }
-    // shouldComponentUpdate(pvsProps,prvsState){
-    //     if(this.sate.count===10){
-    //         return true;
+   
+    shouldComponentUpdate(pvsProps,prvsState){
+        if(this.state.count===10){
+            return true;
 
-    //     }
-    //     else{
-    //         return true
-    //     }
+        }
+        else{
+            return true
+        }
            
-    // }
-    // getSnapshotBeforeUpdate(prveProps,prevsState){
-    //     console.log(prevsState,"preveious Update")
-    //     return null
+    }
+    static getDerivedStateFromProps(props,state){
+        // console.log(props)
+        // console.log(state)
+        return ({color:this.props})
 
-    // }
+    }
     increment=()=>{
         this.setState({count:this.state.count+1})
 
@@ -38,7 +40,7 @@ class UpdatingPhase extends Component{
     render(){
         const {count}=this.state
         return(<>
-        <h1>{count}</h1>
+        <h1 style={{color:this.state.color}}>{count}</h1>
         <button onClick={this.increment}>increments</button>
         <button onClick={this.decrement} disabled={count<=1}>decrement</button>
         </>)

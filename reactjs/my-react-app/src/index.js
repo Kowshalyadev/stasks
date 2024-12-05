@@ -5,9 +5,10 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import BasicExample from './potfolio/reactpotfolio';
 // import App from './apps';
-import UpdatingPhase from './mountingstate/updatingphase';
+// import UpdatingPhase from './mountingstate/updatingphase';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Lifecycles1 from './functionalcopm/comp1';
 
 // import Table from'./createTable';
 // import Home from './homefcomp';
@@ -139,7 +140,8 @@ root.render(
    {/* <Samplefrom/> */}
    {/* <ConditionalRend login="admin"/>
    <Counter/> */}
-   <UpdatingPhase/>
+   <Lifecycles1/>
+   {/* <UpdatingPhase color="red"/> */}
   </React.StrictMode>
 );
 
