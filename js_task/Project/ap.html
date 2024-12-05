@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Puzzle Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+#grid {
+    width: 300px; /* Adjust for different grid sizes */
+    height: 300px; /* Adjust for different grid sizes */
+}
+
+.tile {
+    width: 70px; /* Adjust for different grid sizes */
+    height: 70px; /* Adjust for different grid sizes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 2px solid #343a40;
+    background-color: #ffffff;
+    margin: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tile:hover {
+    background-color: #e2e6ea;
+}
+
+.alert {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #grid {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height */
+    }
+
+    .tile {
+        width: calc(100% / 3 - 4px); /* Responsive tile width for 3x3 */
+        height: calc(100% / 3 - 4px); /* Responsive tile height for 3x3 */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Number Puzzle Game</h1>
+        <div id="grid" class="d-flex flex-wrap justify-content-center"></div>
+        <div class="mt-4">
+            <button id="reset" class="btn btn-primary">Reset</button>
+            <button id="newGame" class="btn btn-secondary">New Game</button>
+        </div>
+        <div id="victoryMessage" class="alert alert-success mt-3" style="display: none;">
+            Congratulations! You've solved the puzzle!
+        </div>
+    </div>
+    <script>
+      const gridElement = document.getElementById('grid');
+const resetButton = document.getElementById('reset');
+const victoryMessage = document.getElementById('victoryMessage');
+const newGameButton = document.getElementById('newGame');
+let gridSize = 4; // Default grid size (4x4)
+let tiles = [];
+
+// Initialize the game
+function initializeGame() {
+    tiles = Array.from(Array(gridSize * gridSize).keys());
+    shuffleTiles();
+    renderGrid();
+}
+
+// Shuffle the tiles
+function shuffleTiles() {
+    for (let i = tiles.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+    }
+}
+
+// Render the grid
+function renderGrid() {
+    gridElement.innerHTML = ''; // Clear previous tiles
+    tiles.forEach((tile, index) => {
+        const tileElement = document.createElement('div');
+        tileElement.className = 'tile';
+        tileElement.textContent = tile === 0 ? '' : tile; // Show number or empty
+        tileElement.dataset.index = index; // Store index
+        tileElement.addEventListener('click', () => handleTileClick(index));
+        gridElement.appendChild(tileElement);
+    });
+}
+
+// Handle tile clicks
+function handleTileClick(index) {
+    const emptyIndex = tiles.indexOf(0); // Find empty tile index
+    if (isValidMove(index, emptyIndex)) {
+        [tiles[index], tiles[emptyIndex]] = [tiles[emptyIndex], tiles[index]]; // Swap tiles
+        renderGrid(); // Re-render grid
+        checkVictory(); // Check for victory
+    }
+}
+
+// Check if the move is valid
+function isValidMove(index, emptyIndex) {
+    const validMoves = [
+        emptyIndex - 1, // Left
+        emptyIndex + 1, // Right
+        emptyIndex - gridSize, // Up
+        emptyIndex + gridSize // Down
+    ];
+    return validMoves.includes(index) && index >= 0 && index < tiles.length;
+}
+
+// Check for victory
+function checkVictory() {
+    if (tiles.every((tile, index) => tile === index)) {
+        victoryMessage.style.display = 'block'; // Show victory message
+    }
+}
+
+// Reset game button
+resetButton.addEventListener('click', () => {
+    initializeGame(); // Restart game
+    victoryMessage.style.display = 'none'; // Hide victory message
+});
+
+// New game button
+newGameButton.addEventListener('click', () => {
+    initializeGame(); // Start new game
+    victoryMessage.style.display = 'none'; // Hide victory message
+});
+
+// Start the game on page load
+initializeGame();
+
+    </script>
+</body>
+</html>

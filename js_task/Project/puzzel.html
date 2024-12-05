@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+}
+
+.container {
+  margin: 50px;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 15px auto;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  color: white;
+  border: 1px solid white;
+  background: #694747;
+  position: absolute;
+  transition: left 0.5s, top 0.5s;
+  box-sizing: border-box;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: inset 6px 6px 13px #685e2c,
+              inset 6px 6px 13px rgba(0,0,0,16);
+}
+
+.empty {
+  background: white;
+  z-index: 1;
+}
+
+[data-pos="0"] {
+  left: 0;
+  top: 0;
+}
+
+[data-pos="1"] {
+  left: 50px;
+  top: 0;
+}
+
+[data-pos="2"] {
+  left: 100px;
+  top: 0;
+}
+
+[data-pos="3"] {
+  left: 150px;
+  top: 0;
+}
+
+[data-pos="4"] {
+  left: 0;
+  top: 50px;
+}
+
+[data-pos="5"] {
+  left: 50px;
+  top: 50px;
+}
+
+[data-pos="6"] {
+  left: 100px;
+  top: 50px;
+}
+
+[data-pos="7"] {
+  left: 150px;
+  top: 50px;
+}
+
+[data-pos="8"] {
+  left: 0;
+  top: 100px;
+}
+
+[data-pos="9"] {
+  left: 50px;
+  top: 100px;
+}
+
+[data-pos="10"] {
+  left: 100px;
+  top: 100px;
+}
+
+[data-pos="11"] {
+  left: 150px;
+  top: 100px;
+}
+
+[data-pos="12"] {
+  left: 0;
+  top: 150px;
+}
+
+[data-pos="13"] {
+  left: 50px;
+  top: 150px;
+}
+
+[data-pos="14"] {
+  left: 100px;
+  top: 150px;
+}
+
+[data-pos="15"] {
+  left: 150px;
+  top: 150px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="square" data-pos="0">1</div>
+  <div class="square" data-pos="1">14</div>
+  <div class="square" data-pos="2">9</div>
+  <div class="square" data-pos="3">3</div>
+  <div class="square" data-pos="4">12</div>
+  <div class="square empty" data-pos="5"></div>
+  <div class="square" data-pos="6">2</div>
+  <div class="square" data-pos="7">6</div>
+  <div class="square" data-pos="8">7</div>
+  <div class="square" data-pos="9">10</div>
+  <div class="square" data-pos="10">11</div>
+  <div class="square" data-pos="11">4</div>
+  <div class="square" data-pos="12">15</div>
+  <div class="square" data-pos="13">5</div>
+  <div class="square" data-pos="14">13</div>
+  <div class="square" data-pos="15">8</div>
+</div>
+</body>
+<script>
+    var squares = document.querySelectorAll('.square');
+squares.forEach(square => {
+  square.addEventListener('click', e => {
+    e.preventDefault();    
+    var firstPos = parseInt(e.target.dataset.pos);
+    var empty = document.querySelectorAll('.empty')[0];
+    var secondPos = parseInt(empty.dataset.pos);
+    
+    var top = secondPos-4;
+    var bottom = secondPos+4;
+    var left = secondPos-1;
+    var right = secondPos+1;
+    
+    if (secondPos%4-left%4 < 1) {
+      left = -1;
+    }
+    if (right%4-secondPos%4 < 1) {
+      right = -1;
+    }
+    var posibilities = [left, right, top, bottom];
+    
+    if (posibilities.includes(firstPos)) {
+      empty.dataset.pos = firstPos;
+      e.target.dataset.pos = secondPos;
+    }
+  })
+});
+</script>
+</html>

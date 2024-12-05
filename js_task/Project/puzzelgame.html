@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Puzzle Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #2298a3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            margin: auto;
+            width: 80%;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 5px;
+            margin: 20px auto;
+            color:black;
+            
+        }
+        .tile {
+            width: 100px;
+            height: 100px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: antiquewhite;
+            border-radius: 12px;
+        }
+        .empty {
+            background-color: transparent;
+            cursor: default;
+        }
+        .victory-message {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #timer{
+            height: 2vh;
+            width: 20vh;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Number Puzzle Game</h1>
+        <p id="timer"></p>
+        <div class="grid" id="grid"></div>
+        <button class="btn btn-primary" id="reset">Reset Game</button>
+        <div class="victory-message" id="victoryMessage">
+            <h2>Congratulations!</h2>
+            <p>You solved the puzzle!</p>
+            <button class="btn btn-success" id="newGame">New Game</button>
+        </div>
+    </div>
+
+    <script>
+        const gridElement = document.getElementById('grid');
+        const resetButton = document.getElementById('reset');
+        const victoryMessage = document.getElementById('victoryMessage');
+        const newGameButton = document.getElementById('newGame');
+        let gridSize = 4; // Default grid size (4x4)
+        let tiles = [];
+        let counter=0;
+        
+
+        // Initialize the game
+        function initializeGame() {
+            tiles = Array.from(Array(gridSize * gridSize).keys());
+            shuffleTiles();
+            renderGrid();
+        }
+
+        // Shuffle the tiles
+        function shuffleTiles() {
+            for (let i = tiles.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+            }
+            if (!isSolvable(tiles)) {
+                shuffleTiles(); // Ensure the puzzle is solvable
+            }
+        }
+
+        // Check if the puzzle is solvable
+        function isSolvable(tiles) {
+            let inversions = 0;
+            for (let i = 0; i < tiles.length; i++) {
+                for (let j = i + 1; j < tiles.length; j++) {
+                    if (tiles[i] > tiles[j] && tiles[i] !== 0 && tiles[j] !== 0) {
+                        inversions++;
+                    }
+                }
+            }
+            return inversions % 2 === 0; // Check for even number of inversions
+        }
+
+        // Render the grid
+        function renderGrid() {
+            gridElement.innerHTML = ''; // Clear previous tiles
+            tiles.forEach((tile, index) => {
+                const tileElement = document.createElement('div');
+                tileElement.className = `tile ${tile === 0 ? 'empty' : ''}`;
+                tileElement.textContent = tile === 0 ? '' : tile; // Show number or empty
+                tileElement.dataset.index = index; // Store index
+                tileElement.addEventListener('click', () => handleTileClick(index));
+                gridElement.appendChild(tileElement);
+            });
+        }
+
+        // Handle tile clicks
+        function handleTileClick(index) {
+            const emptyIndex = tiles.indexOf(0); // Find empty tile index
+            if (isValidMove(index, emptyIndex)) {
+                [tiles[index], tiles[emptyIndex]] = [tiles[emptyIndex], tiles[index]]; // Swap tiles
+                renderGrid(); // Re-render grid
+                checkVictory(); // Check for victory
+            }
+        }
+
+        // Check if the move is valid
+        function isValidMove(index, emptyIndex) {
+            const validMoves = [
+                emptyIndex - 1, // Left
+                emptyIndex + 1, // Right
+                emptyIndex - gridSize, // Up
+                emptyIndex + gridSize // Down
+            ];
+            return validMoves.includes(index) && index >= 0 && index < tiles.length;
+        }
+
+        // Check for victory
+        function checkVictory() {
+            if (tiles.every((tile, index) => tile === index)) {
+                victoryMessage.style.display = 'block'; // Show victory message
+            }
+        }
+
+        // Reset game button
+        resetButton.addEventListener('click', () => {
+            initializeGame(); // Restart game
+            victoryMessage.style.display = 'none'; // Hide victory message
+        });
+
+        // New game button
+        newGameButton.addEventListener('click', () => {
+            initializeGame(); // Start new game
+            victoryMessage.style.display = 'none'; // Hide victory message
+        });
+
+        // Start the game on page load
+        initializeGame();
+    </script>
+</body>
+</html>

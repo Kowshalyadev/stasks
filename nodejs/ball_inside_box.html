@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid;
+            height: 70vh;
+            width: 70vh;
+            /* animation-name: btn;
+            animation-duration: 3s; */
+        }
+        .ball{
+            height: 10vh;
+            width: 10vh;
+            background-color:brown;
+            border-radius: 120px;
+            perspective: 100vh;
+            position: relative;
+            animation-name: btn;
+            animation-duration: 3s;
+            /* transform: translateX(40vh); */
+        }
+        /* input:checked ~ .ball{
+             transform: translateX(40vh); 
+        } */
+        @keyframes btn {
+            0%{
+                background-color: white;
+                left: 0vh;
+                top:0vh;
+            }
+            25%{
+                background-color: aqua;
+                left:60vh;
+                top: 0vh;
+            }
+            50%{
+                background-color: cornflowerblue;
+                left: 60vh;
+                right: 60vh;
+            }
+            75%  {
+                background-color:green; 
+                left:0px; 
+                top:60vh;
+            }
+            100% {
+                background-color:rgb(0, 255, 179); 
+                left:0px; 
+                top:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+    <!-- <input type="radio" name="btn1" value="translateY">translateY -->
+</body>
+</html>
